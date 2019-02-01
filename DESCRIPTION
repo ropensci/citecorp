@@ -1,0 +1,18 @@
+Package: citecorp
+Type: Package
+Title: Client for the Open Citations Corpus
+Description: Client for the Open Citations Corpus.
+Version: 0.0.1.9110
+Authors@R: person("Scott", "Chamberlain", role = c("aut", "cre"),
+    email = "myrmecocystus@gmail.com", 
+    comment = )
+License: MIT + file LICENSE
+URL: https://github.com/ropenscilabs/citecorp
+BugReports: https://github.com/ropenscilabs/citecorp/issues
+Roxygen: list(markdown = TRUE)
+Encoding: UTF-8
+Imports:
+    crul (>= 0.7.0),
+    sparqldsl
+Remotes: ropenscilabs/sparqldsl
+RoxygenNote: 6.1.1
