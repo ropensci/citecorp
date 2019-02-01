@@ -24,10 +24,11 @@ oc_2ids_template <- function(template_string, id_name) {
 #' and the other for the identifier value. Or an empty data.frame
 #' when no results found
 #' @param ... curl options passed on to [crul::verb-GET]
-#' @examples
+#' @examples \dontrun{
 #' oc_doi2ids("10.1097/igc.0000000000000609")
 #' oc_pmid2ids("26645990")
 #' oc_pmcid2ids("PMC4679344")
+#' }
 
 #' @export
 #' @rdname oc_lookup

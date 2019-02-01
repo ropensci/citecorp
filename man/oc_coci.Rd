@@ -9,39 +9,66 @@
 \title{COCI: OpenCitations Index of Crossref open
 DOI-to-DOI references}
 \usage{
-oc_coci_refs(doi, ...)
+oc_coci_refs(doi, exclude = NULL, filter = NULL, sort = NULL, ...)
 
-oc_coci_cites(doi, ...)
+oc_coci_cites(doi, exclude = NULL, filter = NULL, sort = NULL, ...)
 
-oc_coci_meta(doi, ...)
+oc_coci_meta(doi, exclude = NULL, filter = NULL, sort = NULL, ...)
 
 oc_coci_citation(oci, ...)
 }
 \arguments{
 \item{doi}{(character) one or more Digital Object Identifiers}
 
+\item{exclude}{(character) a field_name; all the rows that have an empty
+value in the field_name specified are removed from the result set}
+
+\item{filter}{=<field_name>:<operator><value>: only the rows compliant
+with <value> are kept in the result set. The parameter <operation>
+is not mandatory. If <operation> is not specified, <value> is
+interpreted as a regular expression, otherwise it is compared by means
+of the specified operation. Possible operators are "=", "<", and ">".
+For instance, filter=title:semantics? returns all the rows that
+contain the string "semantic" or "semantics" in the field title,
+while filter=date:>2016-05 returns all the rows that have a date
+greater than May 2016.}
+
+\item{sort}{=<order>(<field_name>): sort in ascending (<order> set to
+"asc") or descending (<order> set to "desc") order the rows in the
+result set according to the values in <field_name>. For instance,
+sort=desc(date) sorts all the rows according to the value specified
+in the field date in descending order.}
+
 \item{...}{curl options passed on to \link[crul:verb-GET]{crul::verb-GET}}
 
 \item{oci}{(character) a single Open Citation Identifier (OCI)}
 }
 \value{
-data.frame
+data.frame, see http://opencitations.net/index/coci/api/v1 for
+explanation of the resulting columns
 }
 \description{
-COCI: OpenCitations Index of Crossref open
-DOI-to-DOI references
+AFAICT this API is a REST wrapper around the SPARQL service
+}
+\note{
+THE PARAMETERS exclude, filter, and sort DON'T ACTUALLY
+WORK, looking into it: https://github.com/opencitations/api-coci/issues/2
 }
 \examples{
 doi1 <- "10.1108/jd-12-2013-0166"
 doi2 <- "10.6084/m9.figshare.3443876"
-oci1 <- "02001010806360107050663080702026306630509-0200101080636102704000806" 
+oci1 <-
+ "02001010806360107050663080702026306630509-0200101080636102704000806"
 
 # references
 oc_coci_refs(doi1)
+oc_coci_refs(doi1, exclude = "oci")
+oc_coci_refs(doi1, filter = "date:>2016-05", verbose = TRUE)
 oc_coci_refs(doi2)
 
 # citations
 oc_coci_cites(doi1)
+oc_coci_cites(doi1, exclude = "oci")
 oc_coci_cites(doi2)
 
 # metadata
@@ -51,4 +78,8 @@ oc_coci_meta(c(doi1, doi2))
 
 # citation - an OCI instead of a DOI
 oc_coci_citation(oci1)
+}
+\references{
+http://opencitations.net/index/coci/api/v1,
+https://github.com/opencitations/api-coci
 }
