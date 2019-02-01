@@ -55,6 +55,7 @@ THE PARAMETERS exclude, filter, and sort DON'T ACTUALLY
 WORK, looking into it: https://github.com/opencitations/api-coci/issues/2
 }
 \examples{
+\dontrun{
 doi1 <- "10.1108/jd-12-2013-0166"
 doi2 <- "10.6084/m9.figshare.3443876"
 oci1 <-
@@ -78,6 +79,7 @@ oc_coci_meta(c(doi1, doi2))
 
 # citation - an OCI instead of a DOI
 oc_coci_citation(oci1)
+}
 }
 \references{
 http://opencitations.net/index/coci/api/v1,

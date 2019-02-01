@@ -6,11 +6,11 @@ citecorp
 
 
 
-citecorp (ya know, like tacocorp, but for citations) 
+citecorp (like tacocorp, but for citations)
 
-Client for the Open Citations Corpus
+Client for the Open Citations Corpus <http://opencitations.net/>
 
-uses an WIP pkg under the hood: [sparqldsl][]
+uses a WIP pkg under the hood: [sparqldsl][]
 
 ## Install
 

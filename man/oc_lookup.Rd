@@ -25,10 +25,12 @@ and the other for the identifier value. Or an empty data.frame
 when no results found
 }
 \description{
-Methods for getting IDs from other IDs
+FIXME: allow length > 1 id input
 }
 \examples{
+\dontrun{
 oc_doi2ids("10.1097/igc.0000000000000609")
 oc_pmid2ids("26645990")
 oc_pmcid2ids("PMC4679344")
+}
 }
