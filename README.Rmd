@@ -13,7 +13,11 @@ knitr::opts_chunk$set(
 )
 ```
 
+citecorp (ya know, like tacocorp, but for citations) 
+
 Client for the Open Citations Corpus
+
+uses an WIP pkg under the hood: [sparqldsl][]
 
 ## Install
 
@@ -27,7 +31,7 @@ devtools::install_github("ropenscilabs/citecorp")
 library("citecorp")
 ```
 
-## Open citations methods
+## Methods for converting IDs
 
 ```{r}
 oc_doi2ids("10.1097/igc.0000000000000609")
@@ -35,9 +39,25 @@ oc_pmid2ids("26645990")
 oc_pmcid2ids("PMC4679344")
 ```
 
+## COCI: OpenCitations Index of Crossref open
+
+```{r}
+library(tibble)
+doi1 <- "10.1108/jd-12-2013-0166"
+# references
+oc_coci_refs(doi1)
+# citations
+oc_coci_cites(doi1)
+# metadata
+oc_coci_meta(doi1)
+```
+
+
 ## Meta
 
 * Please [report any issues or bugs](https://github.com/ropenscilabs/citecorp/issues)
 * License: MIT
 * Get citation information for `citecorp` in R doing `citation(package = 'citecorp')`
 * Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
+
+[sparqldsl]: https://github.com/ropenscilabs/sparqldsl
