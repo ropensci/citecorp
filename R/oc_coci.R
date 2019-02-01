@@ -76,6 +76,7 @@ oc_coci_meta <- function(doi, exclude=NULL, filter=NULL, sort=NULL, ...) {
 #' @export
 #' @name oc_coci
 oc_coci_citation <- function(oci, ...) {
+  assert(oci, "character")
   x <- oc_GET(coci_base, file.path(coci_meta, "citation", oci), ...)
   oc_coci_parser(x)
 }
