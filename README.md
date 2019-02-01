@@ -50,7 +50,11 @@ oc_pmcid2ids("PMC4679344")
 #> 4 pmcid                      PMC4679344
 ```
 
-## COCI: OpenCitations Index of Crossref open
+## COCI methods
+
+OpenCitations Index of Crossref open DOI-to-DOI references
+
+If you don't load `tibble` you get mormal data.frame's
 
 
 ```r
