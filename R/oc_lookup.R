@@ -1,5 +1,7 @@
 oc_2ids_template <- function(template_string, id_name) {
   function(id, ...) {
+    assert(id, c("character", "integer", "numeric"))
+    stopifnot(length(id) == 1)
     qry <- sprintf(template_string, id)
     conn <- sparqldsl::SparqlClient$new(
       url = "opencitations.net", path = "sparql")
@@ -15,6 +17,8 @@ oc_2ids_template <- function(template_string, id_name) {
 }
 
 #' Methods for getting IDs from other IDs
+#' 
+#' FIXME: allow length > 1 id input
 #'
 #' @export
 #' @name oc_lookup

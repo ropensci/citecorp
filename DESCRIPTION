@@ -18,6 +18,7 @@ Imports:
     fauxpas,
     jsonlite
 Suggests:
-    testthat
+    testthat,
+    vcr
 Remotes: ropenscilabs/sparqldsl
 RoxygenNote: 6.1.1

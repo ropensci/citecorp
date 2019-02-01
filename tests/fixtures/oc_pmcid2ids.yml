@@ -1,0 +1,50 @@
+http_interactions:
+- request:
+    method: get
+    uri: http://opencitations.net/sparql?query=PREFIX%20datacite%3A%20%3Chttp%3A%2F%2Fpurl.org%2Fspar%2Fdatacite%2F%3E%0A%20%20PREFIX%20literal%3A%20%3Chttp%3A%2F%2Fwww.essepuntato.it%2F2010%2F06%2Fliteralreification%2F%3E%0A%20%20SELECT%20%3Fpaper%20%3Fdoi%20%3Fpmid%20WHERE%20%7B%0A%20%20%20%20%3Fpaper%20datacite%3AhasIdentifier%20%5B%0A%20%20%20%20%20%20%20%20datacite%3AusesIdentifierScheme%20datacite%3Apmcid%20%3B%0A%20%20%20%20%20%20%20%20literal%3AhasLiteralValue%20%22PMC4679344%22%0A%20%20%20%20%5D%20.%0A%0A%20%20%20%20OPTIONAL%20%7B%0A%20%20%20%20%20%20%3Fpaper%20datacite%3AhasIdentifier%20%5B%0A%20%20%20%20%20%20%20%20datacite%3AusesIdentifierScheme%20datacite%3Adoi%20%3B%0A%20%20%20%20%20%20%20%20literal%3AhasLiteralValue%20%3Fdoi%0A%20%20%20%20%20%20%5D%20.%0A%20%20%20%20%7D%0A%0A%20%20%20%20OPTIONAL%20%7B%0A%20%20%20%20%20%20%3Fpaper%20datacite%3AhasIdentifier%20%5B%0A%20%20%20%20%20%20%20%20datacite%3AusesIdentifierScheme%20datacite%3Apmid%20%3B%0A%20%20%20%20%20%20%20%20literal%3AhasLiteralValue%20%3Fpmid%0A%20%20%20%20%20%20%5D%20.%0A%20%20%20%20%7D%0A%20%20%7D&format=json
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.54.0 r-curl/3.3 crul/0.7.0.9100
+      Accept-Encoding: gzip, deflate
+      Accept: application/sparql-results+json
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      access-control-allow-origin: '*'
+      access-control-allow-credentials: 'true'
+      content-type: application/sparql-results+json
+      content-length: '397'
+      date: Fri, 01 Feb 2019 17:37:32 GMT
+      server: lighttpd/1.4.45
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "head" : {
+            "vars" : [ "paper", "doi", "pmid" ]
+          },
+          "results" : {
+            "bindings" : [ {
+              "paper" : {
+                "type" : "uri",
+                "value" : "https://w3id.org/oc/corpus/br/1"
+              },
+              "doi" : {
+                "type" : "literal",
+                "value" : "10.1097/igc.0000000000000609"
+              },
+              "pmid" : {
+                "type" : "literal",
+                "value" : "26645990"
+              }
+            } ]
+          }
+        }
+  recorded_at: 2019-02-01 17:37:32 GMT
+  recorded_with: vcr/0.2.2, webmockr/0.3.0
