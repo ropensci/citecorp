@@ -8,8 +8,8 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/3.3 crul/0.7.0.9100 rOpenSci(citecorp/0.0.2.9110)
-      X-USER-AGENT: r-curl/3.3 crul/0.7.0.9100 rOpenSci(citecorp/0.0.2.9110)
+      User-Agent: r-curl/4.0 crul/0.8.4 rOpenSci(citecorp/0.0.9.9110)
+      X-USER-AGENT: r-curl/4.0 crul/0.8.4 rOpenSci(citecorp/0.0.9.9110)
   response:
     status:
       status_code: '200'
@@ -17,31 +17,34 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
+      date: Fri, 16 Aug 2019 17:27:56 GMT
+      content-type: application/json
+      transfer-encoding: chunked
+      connection: keep-alive
       access-control-allow-origin: '*'
       access-control-allow-credentials: 'true'
-      content-type: application/json
-      content-length: '1765'
-      date: Fri, 01 Feb 2019 17:50:09 GMT
-      server: lighttpd/1.4.45
+      server: cloudflare
+      cf-ray: 50751f283a97bcd2-SEA
+      content-encoding: gzip
     body:
       encoding: UTF-8
       string: |-
         [
             {
-                "citation": "10.1177/0961000615616450; 10.7554/elife.32822; 10.1145/3197026.3197050; 10.1093/bib/bbx057; 10.1007/978-3-319-68204-4_19; 10.3346/jkms.2015.30.11.1545; 10.1007/978-3-319-73165-0_24; 10.3233/sw-160224; 10.3233/sw-180307; 10.1007/978-3-319-90548-8_7; 10.1142/s021964921850034x; 10.1007/978-3-319-58694-6_23; 10.1057/s41275-017-0070-x",
-                "author": "Peroni, Silvio; Dutton, Alexander; Gray, Tanya; Shotton, David",
-                "issue": "2",
-                "source_title": "Journal Of Documentation",
-                "doi": "10.1108/jd-12-2013-0166",
                 "title": "Setting Our Bibliographic References Free: Towards Open Citation Data",
-                "oa_link": "",
+                "doi": "10.1108/jd-12-2013-0166",
+                "citation": "10.1177/0961000615616450; 10.7554/elife.32822; 10.1145/3197026.3197050; 10.1093/bib/bbx057; 10.1007/978-3-319-68204-4_19; 10.3346/jkms.2015.30.11.1545; 10.1007/978-3-319-73165-0_24; 10.3233/sw-160224; 10.3233/sw-180307; 10.1007/978-3-319-90548-8_7; 10.1142/s021964921850034x; 10.1007/978-3-319-58694-6_23; 10.1057/s41275-017-0070-x",
                 "volume": "71",
-                "citation_count": "13",
-                "page": "253-277",
+                "author": "Peroni, Silvio; Dutton, Alexander; Gray, Tanya; Shotton, David",
+                "oa_link": "",
                 "year": "2015",
-                "source_id": "issn:0022-0418",
-                "reference": "10.1001/jama.295.1.90; 10.1002/asi.4630240406; 10.1002/(sici)1097-4571(198909)40:5<342::aid-asi7>3.0.co;2-u; 10.1007/bf02457980; 10.1007/s10579-012-9211-2; 10.1007/s11192-009-0021-2; 10.1016/j.websem.2012.08.001; 10.1016/j.websem.2013.05.001; 10.1023/a:1021919228368; 10.1038/35079151; 10.1038/495437a; 10.1038/502295a; 10.1038/502298a; 10.1042/bj20091474; 10.1073/pnas.0407743101; 10.1087/2009202; 10.1093/bioinformatics; 10.1101/sqb.1972.036.01.015; 10.1108/eum0000000007123; 10.1108/jd-07-2012-0082; 10.1126/science.149.3683.510; 10.1136/bmj.a568; 10.1136/bmj.b2680; 10.1145/1498765.1498780; 10.1177/030631277400400102; 10.1177/030631277500500106; 10.1371/journal.pcbi.0010034; 10.1371/journal.pcbi.1000361; 10.1371/journal.pntd.0000228; 10.1371/journal.pone.0000308; 10.1523/jneurosci.0003-08.2008; 10.1525/bio.2010.60.5.2; 10.3115/1610075.1610091; 10.5210/fm.v2i4.522; 10.5539/ass.v9n5p18; 10.7717/peerj.175"
+                "reference": "10.1001/jama.295.1.90; 10.1002/asi.4630240406; 10.1002/(sici)1097-4571(198909)40:5<342::aid-asi7>3.0.co;2-u; 10.1007/bf02457980; 10.1007/s10579-012-9211-2; 10.1007/s11192-009-0021-2; 10.1016/j.websem.2012.08.001; 10.1016/j.websem.2013.05.001; 10.1023/a:1021919228368; 10.1038/35079151; 10.1038/495437a; 10.1038/502295a; 10.1038/502298a; 10.1042/bj20091474; 10.1073/pnas.0407743101; 10.1087/2009202; 10.1093/bioinformatics; 10.1101/sqb.1972.036.01.015; 10.1108/eum0000000007123; 10.1108/jd-07-2012-0082; 10.1126/science.149.3683.510; 10.1136/bmj.a568; 10.1136/bmj.b2680; 10.1145/1498765.1498780; 10.1177/030631277400400102; 10.1177/030631277500500106; 10.1371/journal.pcbi.0010034; 10.1371/journal.pcbi.1000361; 10.1371/journal.pntd.0000228; 10.1371/journal.pone.0000308; 10.1523/jneurosci.0003-08.2008; 10.1525/bio.2010.60.5.2; 10.3115/1610075.1610091; 10.5210/fm.v2i4.522; 10.5539/ass.v9n5p18; 10.7717/peerj.175",
+                "citation_count": "13",
+                "source_title": "Journal Of Documentation",
+                "page": "253-277",
+                "issue": "2",
+                "source_id": "issn:0022-0418"
             }
         ]
-  recorded_at: 2019-02-01 17:50:09 GMT
-  recorded_with: vcr/0.2.2, webmockr/0.3.0
+  recorded_at: 2019-08-16 17:27:56 GMT
+  recorded_with: vcr/0.2.6, webmockr/0.4.0
