@@ -10,3 +10,4 @@ CODE_OF_CONDUCT.md
 notes.R
 notes.md
 prefix_notes.R
+^Makefile$
