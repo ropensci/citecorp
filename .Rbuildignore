@@ -12,3 +12,4 @@ notes.md
 prefix_notes.R
 ^Makefile$
 .github
+^codemeta\.json$
