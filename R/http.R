@@ -1,3 +1,5 @@
+coci_base <- "http://opencitations.net"
+
 errs <- function(x) {
   if (x$status_code > 201) {
     fun <- fauxpas::find_error_class(x$status_code)$new()
@@ -24,4 +26,23 @@ oc_ua <- function() {
             utils::packageVersion("citecorp"))
   )
   paste0(versions, collapse = " ")
+}
+
+oc_sparql_GET <- function(url, path, query, flatten = FALSE, ...) {
+  cli <- crul::HttpClient$new(
+    url = url, opts = list(...),
+    headers = list(
+      Accept = "application/sparql-results+json",
+      "User-Agent" = oc_ua(),
+      "X-USER-AGENT" = oc_ua()
+    )
+  )
+  qry <- list(query = query, format = "json")
+  res <- cli$get(path, query = qry)
+  res$raise_for_status()
+  jsonlite::fromJSON(res$parse("UTF-8"), flatten = flatten)
+}
+
+cp_query <- function(query, flatten = TRUE, ...) {
+  oc_sparql_GET(coci_base, "sparql", query, flatten = flatten, ...)
 }

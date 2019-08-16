@@ -1,6 +1,5 @@
 #' Client for the Open Citations Corpus <http://opencitations.net/>
 #'
-#' @importFrom sparqldsl SparqlClient
 #' @importFrom fauxpas http find_error_class
 #' @importFrom data.table setDF rbindlist
 #' @importFrom jsonlite fromJSON

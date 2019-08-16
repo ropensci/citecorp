@@ -3,9 +3,7 @@ oc_2ids_template <- function(template_string, id_name) {
     assert(id, c("character", "integer", "numeric"))
     stopifnot(length(id) == 1)
     qry <- sprintf(template_string, id)
-    conn <- sparqldsl::SparqlClient$new(
-      url = "opencitations.net", path = "sparql")
-    tmp <- conn$query(qry, ...)$results$bindings
+    tmp <- cp_query(qry, ...)$results$bindings
     if (length(tmp) == 0) return(data.frame(NULL))
     tmp <- data.frame(
       type = gsub("\\.type", "", names(tmp[, grep("\\.type", names(tmp))])),

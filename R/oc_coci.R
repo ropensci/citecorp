@@ -102,5 +102,4 @@ oc_coci_parser <- function(x) {
   structure(z, class = c("tbl_df", "tbl", "data.frame"))
 }
 
-coci_base <- "http://opencitations.net"
 coci_meta <- "index/coci/api/v1"
