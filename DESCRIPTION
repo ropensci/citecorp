@@ -2,6 +2,8 @@ Package: citecorp
 Type: Package
 Title: Client for the Open Citations Corpus
 Description: Client for the Open Citations Corpus (<http://opencitations.net/>).
+    Includes a set of functions for getting one identifier type from another,
+    as well as getting references and citations for a given identifier.
 Version: 0.0.9.9110
 Authors@R: person("Scott", "Chamberlain", role = c("aut", "cre"),
     email = "myrmecocystus@gmail.com", 

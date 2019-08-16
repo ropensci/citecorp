@@ -15,7 +15,19 @@ knitr::opts_chunk$set(
 
 citecorp (like tacocorp, but for citations)
 
-Client for the Open Citations Corpus <http://opencitations.net/>
+Client for the Open Citations Corpus <http://opencitations.net/> (OCC)
+
+OCC created their own identifiers called Open Citation Identifiers (oci), e.g., 
+
+```
+020010009033611182421271436182433010601-02001030701361924302723102137251614233701000005090307
+```
+
+You are probably not going to be using oci identifiers, but rather DOIs and/or PMIDs
+and/or PMCIDs. See `?oc_lookup` for methods for cross-walking among identifier types.
+
+If you'd like to use the OpenCitations Sparql endpoint yourself you can find that
+at http://opencitations.net/sparql
 
 
 ## Install

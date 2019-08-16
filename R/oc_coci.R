@@ -27,11 +27,9 @@
 #' explanation of the resulting columns
 #' @references http://opencitations.net/index/coci/api/v1,
 #' https://github.com/opencitations/api-coci
-#' @note THE PARAMETERS exclude, filter, and sort DON'T ACTUALLY
-#' WORK, looking into it: https://github.com/opencitations/api-coci/issues/2
 #' @examples \dontrun{
 #' doi1 <- "10.1108/jd-12-2013-0166"
-#' doi2 <- "10.6084/m9.figshare.3443876"
+#' doi2 <- "10.1371/journal.pgen.1005937"
 #' oci1 <-
 #'  "02001010806360107050663080702026306630509-0200101080636102704000806"
 #'
