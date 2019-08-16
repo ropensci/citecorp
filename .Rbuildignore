@@ -11,3 +11,4 @@ notes.R
 notes.md
 prefix_notes.R
 ^Makefile$
+.github
