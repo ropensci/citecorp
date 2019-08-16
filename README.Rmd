@@ -17,9 +17,14 @@ citecorp (like tacocorp, but for citations)
 
 Client for the Open Citations Corpus <http://opencitations.net/>
 
-uses a WIP pkg under the hood: [sparqldsl][]
 
 ## Install
+
+CRAN version
+
+```{r eval=FALSE}
+install.packages("citecorp")
+```
 
 Development version
 
@@ -43,7 +48,7 @@ oc_pmcid2ids("PMC4679344")
 
 OpenCitations Index of Crossref open DOI-to-DOI references
 
-If you don't load `tibble` you get mormal data.frame's
+If you don't load `tibble` you get normal data.frame's
 
 ```{r}
 library(tibble)
@@ -62,6 +67,8 @@ oc_coci_meta(doi1)
 * Please [report any issues or bugs](https://github.com/ropenscilabs/citecorp/issues)
 * License: MIT
 * Get citation information for `citecorp` in R doing `citation(package = 'citecorp')`
-* Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
+* Please note that this project is released with a [Contributor Code of Conduct][coc].
+By participating in this project you agree to abide by its terms.
 
 [sparqldsl]: https://github.com/ropenscilabs/sparqldsl
+[coc]: https://github.com/ropenscilabs/citecorp/blob/master/CODE_OF_CONDUCT.md
