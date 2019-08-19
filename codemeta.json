@@ -1,5 +1,8 @@
 {
-  "@context": ["https://doi.org/10.5063/schema/codemeta-2.0", "http://schema.org"],
+  "@context": [
+    "https://doi.org/10.5063/schema/codemeta-2.0",
+    "http://schema.org"
+  ],
   "@type": "SoftwareSourceCode",
   "identifier": "citecorp",
   "description": "Client for the Open Citations Corpus (<http://opencitations.net/>).\n    Includes a set of functions for getting one identifier type from another,\n    as well as getting references and citations for a given identifier.",
@@ -117,7 +120,8 @@
   "isPartOf": "https://ropensci.org",
   "keywords": ["doi", "metadata", "citation", "opencitations", "bibtex", "citations", "pmid", "pmcid", "sparql", "r", "r-package", "rstats"],
   "readme": "https://github.com/ropenscilabs/citecorp/blob/master/README.md",
-  "fileSize": "10.825KB",
+  "fileSize": "10.903KB",
   "contIntegration": "https://travis-ci.com/ropenscilabs/citecorp",
-  "developmentStatus": "https://www.repostatus.org/#wip"
+  "developmentStatus": "https://www.repostatus.org/#wip",
+  "releaseNotes": "https://github.com/ropenscilabs/citecorp/blob/master/NEWS.md"
 }
