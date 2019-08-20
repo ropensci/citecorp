@@ -28,7 +28,7 @@ when no results found
 Methods for getting IDs from other IDs
 }
 \examples{
-\dontrun{
+if (crul::ok('http://opencitations.net/sparql')) {
 oc_doi2ids("10.1097/igc.0000000000000609")
 oc_pmid2ids("26645990")
 oc_pmcid2ids("PMC4679344")

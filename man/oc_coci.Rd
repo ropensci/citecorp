@@ -51,25 +51,32 @@ explanation of the resulting columns
 AFAICT this API is a REST wrapper around the SPARQL service
 }
 \examples{
-\dontrun{
 doi1 <- "10.1108/jd-12-2013-0166"
 doi2 <- "10.1371/journal.pgen.1005937"
 oci1 <-
  "02001010806360107050663080702026306630509-0200101080636102704000806"
 
+if (crul::ok("http://opencitations.net/index/coci/api/v1")) {
 # references
 oc_coci_refs(doi1)
+# citations
+oc_coci_cites(doi1)
+# metadata
+oc_coci_meta(doi1)
+}
+
+### More examples
+\dontrun{
+# references
 oc_coci_refs(doi1, exclude = "oci")
 oc_coci_refs(doi1, filter = "date:>2016-05", verbose = TRUE)
 oc_coci_refs(doi2)
 
 # citations
-oc_coci_cites(doi1)
 oc_coci_cites(doi1, exclude = "oci")
 oc_coci_cites(doi2)
 
 # metadata
-oc_coci_meta(doi1)
 oc_coci_meta(doi2)
 oc_coci_meta(c(doi1, doi2))
 
