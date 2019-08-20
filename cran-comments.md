@@ -19,5 +19,7 @@ New submission
 This is a new release. I have read and agree to the the
 CRAN policies at https://cran.r-project.org/web/packages/policies.html
 
+This is a re-submission of this package with changes to examples: some examples are now run on check if the external web service is operating normally; not all examples are run as some take too long.
+
 Thanks!
 Scott Chamberlain
