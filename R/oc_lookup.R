@@ -14,9 +14,9 @@ oc_2ids_template <- function(template_string, id_name) {
   }
 }
 
+# FIXME: allow length > 1 id input
+
 #' Methods for getting IDs from other IDs
-#' 
-#' FIXME: allow length > 1 id input
 #'
 #' @export
 #' @name oc_lookup

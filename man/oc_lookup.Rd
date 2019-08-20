@@ -25,7 +25,7 @@ and the other for the identifier value. Or an empty data.frame
 when no results found
 }
 \description{
-FIXME: allow length > 1 id input
+Methods for getting IDs from other IDs
 }
 \examples{
 \dontrun{
