@@ -61,8 +61,6 @@ if (crul::ok("http://opencitations.net/index/coci/api/v1")) {
 oc_coci_refs(doi1)
 # citations
 oc_coci_cites(doi1)
-# metadata
-oc_coci_meta(doi1)
 }
 
 ### More examples
