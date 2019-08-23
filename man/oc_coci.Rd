@@ -66,7 +66,7 @@ oc_coci_meta(doi1)
 }
 
 ### More examples
-\dontrun{
+\donttest{
 # references
 oc_coci_refs(doi1, exclude = "oci")
 oc_coci_refs(doi1, filter = "date:>2016-05", verbose = TRUE)
