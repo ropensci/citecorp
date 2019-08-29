@@ -10,7 +10,7 @@
   "codeRepository": "https://github.com/ropenscilabs/citecorp",
   "issueTracker": "https://github.com/ropenscilabs/citecorp/issues",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "0.1.0",
+  "version": "0.1.0.9100",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
@@ -120,8 +120,14 @@
   "isPartOf": "https://ropensci.org",
   "keywords": ["doi", "metadata", "citation", "opencitations", "bibtex", "citations", "pmid", "pmcid", "sparql", "r", "r-package", "rstats"],
   "readme": "https://github.com/ropenscilabs/citecorp/blob/master/README.md",
-  "fileSize": "10.963KB",
+  "fileSize": "11.114KB",
   "contIntegration": "https://travis-ci.com/ropenscilabs/citecorp",
   "developmentStatus": "https://www.repostatus.org/#wip",
-  "releaseNotes": "https://github.com/ropenscilabs/citecorp/blob/master/NEWS.md"
+  "releaseNotes": "https://github.com/ropenscilabs/citecorp/blob/master/NEWS.md",
+  "provider": {
+    "@id": "https://cran.r-project.org",
+    "@type": "Organization",
+    "name": "Comprehensive R Archive Network (CRAN)",
+    "url": "https://cran.r-project.org"
+  }
 }
