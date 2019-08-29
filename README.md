@@ -9,8 +9,6 @@ citecorp
 [![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/citecorp)](https://github.com/metacran/cranlogs.app)
 [![cran version](http://www.r-pkg.org/badges/version/citecorp)](https://cran.r-project.org/package=citecorp)
 
-citecorp (like tacocorp, but for citations)
-
 Client for the Open Citations Corpus <http://opencitations.net/> (OCC)
 
 OCC created their own identifiers called Open Citation Identifiers (oci), e.g., 
