@@ -13,3 +13,4 @@ prefix_notes.R
 ^Makefile$
 .github
 ^codemeta\.json$
+inst/scripts/*

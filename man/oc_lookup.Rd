@@ -14,15 +14,21 @@ oc_pmid2ids(id, ...)
 oc_pmcid2ids(id, ...)
 }
 \arguments{
-\item{id}{Either a digital object identifier (DOI),
+\item{id}{One or more digital object identifiers (DOI),
 PMID, or PMCID, depending on the function}
 
 \item{...}{curl options passed on to \link[crul:verb-GET]{crul::verb-GET}}
 }
 \value{
-data.frame, with two columns, one for identifier type
-and the other for the identifier value. Or an empty data.frame
-when no results found
+data.frame, with four columns:
+\itemize{
+\item doi: digital object identifier
+\item pmid: pubmed identifier
+\item pmcid: pubmed central identifier
+\item paper: open citations corpus url
+}
+
+an empty data.frame when no results found
 }
 \description{
 Methods for getting IDs from other IDs
@@ -32,5 +38,9 @@ if (crul::ok('http://opencitations.net/sparql')) {
 oc_doi2ids("10.1097/igc.0000000000000609")
 oc_pmid2ids("26645990")
 oc_pmcid2ids("PMC4679344")
+
+oc_doi2ids(id = oc_dois[1:3])
+oc_pmid2ids(id = oc_pmids[1:3])
+oc_pmcid2ids(id = oc_pmcids[1:3])
 }
 }
