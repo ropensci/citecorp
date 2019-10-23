@@ -6,8 +6,8 @@ oc_2ids_template <- function(template_string, id_name) {
     tmp <- cp_query(qry, ...)$results$bindings
     if (length(tmp) == 0) return(data.frame(NULL))
     tmp <- data.frame(
-      type = gsub("\\.type", "", names(tmp[, grep("\\.type", names(tmp))])),
-      value = unlist(unname(c(tmp[, grep("\\.value", names(tmp))]))),
+      type  = gsub('\\.type', '', grep('\\.type', names(tmp), value = TRUE)),
+      value = as.vector(tmp[, grep('\\.value', names(tmp))]),
       stringsAsFactors = FALSE
     )
     rbind(tmp, c(id_name, id))
