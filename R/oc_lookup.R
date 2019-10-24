@@ -7,7 +7,7 @@ oc_2ids_template <- function(template_string, id_name) {
     df <- tmp[-grep('\\.type', names(tmp))]
     names(df) <- gsub("\\.value", "", names(df))
     names(df)[1] <- id_name
-    df <- df[, c("doi", "pmid", "pmcid", "paper")]
+    df <- df[, names(df) %in% c("doi", "pmid", "pmcid", "paper")]
     return(df)
   }
 }
