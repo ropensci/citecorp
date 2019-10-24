@@ -25,11 +25,13 @@ oc_2ids_template <- function(template_string, id_name) {
 #' - pmcid: pubmed central identifier
 #' - paper: open citations corpus url
 #' 
-#' an empty data.frame when no results found
+#' an empty data.frame (no columns or rows) when no results found
 #' @param ... curl options passed on to [crul::verb-GET]
 #' @examples
 #' if (crul::ok('http://opencitations.net/sparql')) {
 #' oc_doi2ids("10.1097/igc.0000000000000609")
+#' oc_doi2ids('10.1093/biomet/80.3.527')
+#' oc_doi2ids('10.1093/biomet/79.3.531')
 #' oc_pmid2ids("26645990")
 #' oc_pmcid2ids("PMC4679344")
 #' 

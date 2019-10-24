@@ -1,3 +1,5 @@
+cols <- sort(c("doi", "pmid", "pmcid", "paper"))
+
 context("oc_doi2ids")
 test_that("oc_doi2ids works", {
   vcr::use_cassette("oc_doi2ids", {
@@ -5,8 +7,23 @@ test_that("oc_doi2ids works", {
   })
 
   expect_is(x, "data.frame")
-  expect_named(x, c("doi", "pmid", "pmcid", "paper"))
+  expect_equal(sort(names(x)), cols)
   for (i in seq_len(NCOL(x))) expect_is(x[,i], "character")
+})
+
+test_that("oc_doi2ids works", {
+  vcr::use_cassette("oc_doi2ids_fewer_columns", {
+    x <- oc_doi2ids('10.1093/biomet/80.3.527')
+    y <- oc_doi2ids('10.1093/biomet/79.3.531')
+  })
+
+  expect_is(x, "data.frame")
+  expect_equal(sort(names(x)), c("doi", "paper"))
+  for (i in seq_len(NCOL(x))) expect_is(x[,i], "character")
+
+  expect_is(y, "data.frame")
+  expect_equal(sort(names(y)), c("doi", "paper"))
+  for (i in seq_len(NCOL(y))) expect_is(y[,i], "character")
 })
 
 test_that("oc_doi2ids fails well", {
@@ -23,7 +40,7 @@ test_that("oc_pmid2ids works", {
   })
 
   expect_is(x, "data.frame")
-  expect_named(x, c("doi", "pmid", "pmcid", "paper"))
+  expect_equal(sort(names(x)), cols)
   for (i in seq_len(NCOL(x))) expect_is(x[,i], "character")
 })
 
@@ -41,7 +58,7 @@ test_that("oc_pmcid2ids works", {
   })
 
   expect_is(x, "data.frame")
-  expect_named(x, c("doi", "pmid", "pmcid", "paper"))
+  expect_equal(sort(names(x)), cols)
   for (i in seq_len(NCOL(x))) expect_is(x[,i], "character")
 })
 

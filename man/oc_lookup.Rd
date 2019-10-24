@@ -28,7 +28,7 @@ data.frame, with four columns:
 \item paper: open citations corpus url
 }
 
-an empty data.frame when no results found
+an empty data.frame (no columns or rows) when no results found
 }
 \description{
 Methods for getting IDs from other IDs
@@ -36,6 +36,8 @@ Methods for getting IDs from other IDs
 \examples{
 if (crul::ok('http://opencitations.net/sparql')) {
 oc_doi2ids("10.1097/igc.0000000000000609")
+oc_doi2ids('10.1093/biomet/80.3.527')
+oc_doi2ids('10.1093/biomet/79.3.531')
 oc_pmid2ids("26645990")
 oc_pmcid2ids("PMC4679344")
 
