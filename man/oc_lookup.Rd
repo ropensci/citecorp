@@ -28,7 +28,11 @@ data.frame, with four columns:
 \item paper: open citations corpus url
 }
 
-an empty data.frame (no columns or rows) when no results found
+An empty data.frame (no columns or rows) when no results found
+
+Column order will always be the same; note though that some
+columns may be missing if, for example, there's no PMID for
+a DOI search.
 }
 \description{
 Methods for getting IDs from other IDs

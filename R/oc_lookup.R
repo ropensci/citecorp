@@ -8,6 +8,7 @@ oc_2ids_template <- function(template_string, id_name) {
     names(df) <- gsub("\\.value", "", names(df))
     names(df)[1] <- id_name
     df <- df[, names(df) %in% c("doi", "pmid", "pmcid", "paper")]
+    df <- df[, sort(names(df))]
     return(df)
   }
 }
@@ -25,7 +26,11 @@ oc_2ids_template <- function(template_string, id_name) {
 #' - pmcid: pubmed central identifier
 #' - paper: open citations corpus url
 #' 
-#' an empty data.frame (no columns or rows) when no results found
+#' An empty data.frame (no columns or rows) when no results found
+#' 
+#' Column order will always be the same; note though that some
+#' columns may be missing if, for example, there's no PMID for
+#' a DOI search.
 #' @param ... curl options passed on to [crul::verb-GET]
 #' @examples
 #' if (crul::ok('http://opencitations.net/sparql')) {
