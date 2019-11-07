@@ -6,20 +6,15 @@
 
 ## R CMD check results
 
-0 errors | 0 warnings | 1 note
-
-New submission
+0 errors | 0 warnings | 0 notes
 
 ## Reverse dependencies
 
-* This is a new submission, so there are no reverse dependencies.
+* There are no reverse dependencies.
 
 ---
 
-This is a new release. I have read and agree to the the
-CRAN policies at https://cran.r-project.org/web/packages/policies.html
-
-This is a re-submission of this package with changes to examples: some examples are now run on check if the external web service is operating normally; not all examples are run as some take too long and are wrapped in \donttest{}.
+This version fixes errors in parsing data, and vectorizes three functions.
 
 Thanks!
 Scott Chamberlain
