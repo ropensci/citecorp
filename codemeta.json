@@ -129,5 +129,6 @@
     "@type": "Organization",
     "name": "Comprehensive R Archive Network (CRAN)",
     "url": "https://cran.r-project.org"
-  }
+  },
+  "relatedLink": "https://docs.ropensci.org/citecorp/"
 }
