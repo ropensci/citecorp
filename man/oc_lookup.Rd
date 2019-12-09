@@ -39,7 +39,10 @@ Methods for getting IDs from other IDs
 }
 \examples{
 if (oc_lookup_check()) {
-oc_doi2ids("10.1097/igc.0000000000000609")
+try(
+  oc_doi2ids("10.1097/igc.0000000000000609", timeout_ms=10),
+  silent = TRUE
+)
 }
 
 ### More examples

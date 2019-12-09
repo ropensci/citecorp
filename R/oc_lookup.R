@@ -34,7 +34,10 @@ oc_2ids_template <- function(template_string, id_name) {
 #' @param ... curl options passed on to [crul::verb-GET]
 #' @examples
 #' if (oc_lookup_check()) {
-#' oc_doi2ids("10.1097/igc.0000000000000609")
+#' try(
+#'   oc_doi2ids("10.1097/igc.0000000000000609", timeout_ms=10),
+#'   silent = TRUE
+#' )
 #' }
 #' 
 #' ### More examples
