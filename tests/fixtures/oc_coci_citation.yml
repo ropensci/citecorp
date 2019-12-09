@@ -8,8 +8,8 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.0 crul/0.8.4 rOpenSci(citecorp/0.0.9.9110)
-      X-USER-AGENT: r-curl/4.0 crul/0.8.4 rOpenSci(citecorp/0.0.9.9110)
+      User-Agent: r-curl/4.3 crul/0.9.0 rOpenSci(citecorp/0.2.2)
+      X-USER-AGENT: r-curl/4.3 crul/0.9.0 rOpenSci(citecorp/0.2.2)
   response:
     status:
       status_code: '200'
@@ -17,28 +17,30 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Fri, 16 Aug 2019 17:27:57 GMT
+      date: Mon, 09 Dec 2019 16:14:08 GMT
       content-type: application/json
       transfer-encoding: chunked
       connection: keep-alive
       access-control-allow-origin: '*'
       access-control-allow-credentials: 'true'
+      cf-cache-status: DYNAMIC
       server: cloudflare
-      cf-ray: 50751f358fcdbcd2-SEA
+      cf-ray: 542845323d616d28-SJC
       content-encoding: gzip
     body:
       encoding: UTF-8
+      file: no
       string: |-
         [
             {
                 "author_sc": "no",
-                "creation": "2013",
-                "journal_sc": "no",
-                "oci": "02001010806360107050663080702026306630509-0200101080636102704000806",
                 "timespan": "P1Y",
+                "oci": "02001010806360107050663080702026306630509-0200101080636102704000806",
+                "citing": "10.1186/1756-8722-6-59",
+                "journal_sc": "no",
                 "cited": "10.1186/ar4086",
-                "citing": "10.1186/1756-8722-6-59"
+                "creation": "2013"
             }
         ]
-  recorded_at: 2019-08-16 17:27:57 GMT
-  recorded_with: vcr/0.2.6, webmockr/0.4.0
+  recorded_at: 2019-12-09 16:14:09 GMT
+  recorded_with: vcr/0.4.0, webmockr/0.5.0

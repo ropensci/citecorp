@@ -8,8 +8,8 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/sparql-results+json
-      User-Agent: r-curl/4.2 crul/0.8.4 rOpenSci(citecorp/0.1.2.9100)
-      X-USER-AGENT: r-curl/4.2 crul/0.8.4 rOpenSci(citecorp/0.1.2.9100)
+      User-Agent: r-curl/4.3 crul/0.9.0 rOpenSci(citecorp/0.2.2)
+      X-USER-AGENT: r-curl/4.3 crul/0.9.0 rOpenSci(citecorp/0.2.2)
   response:
     status:
       status_code: '200'
@@ -17,7 +17,7 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Thu, 24 Oct 2019 15:57:42 GMT
+      date: Mon, 09 Dec 2019 16:15:02 GMT
       content-type: application/sparql-results+json
       content-length: '328'
       connection: keep-alive
@@ -25,9 +25,10 @@ http_interactions:
       access-control-allow-credentials: 'true'
       cf-cache-status: DYNAMIC
       server: cloudflare
-      cf-ray: 52ad25e5a9358cd9-PDX
+      cf-ray: 542846860d4eed63-SJC
     body:
       encoding: UTF-8
+      file: no
       string: |-
         {
           "head" : {
@@ -46,8 +47,8 @@ http_interactions:
             } ]
           }
         }
-  recorded_at: 2019-10-24 15:57:45 GMT
-  recorded_with: vcr/0.3.0, webmockr/0.4.0
+  recorded_at: 2019-12-09 16:15:03 GMT
+  recorded_with: vcr/0.4.0, webmockr/0.5.0
 - request:
     method: get
     uri: http://opencitations.net/sparql?query=PREFIX%20datacite%3A%20%3Chttp%3A%2F%2Fpurl.org%2Fspar%2Fdatacite%2F%3E%0A%20%20PREFIX%20literal%3A%20%3Chttp%3A%2F%2Fwww.essepuntato.it%2F2010%2F06%2Fliteralreification%2F%3E%0A%20%20SELECT%20%3Fpaper%20%3Fpmid%20%3Fpmcid%20%3Fvalue%0A%20%20WHERE%20%7B%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%3Fpaper%20datacite%3AhasIdentifier%20%5B%0A%20%20%20%20%20%20%20%20%20%20datacite%3AusesIdentifierScheme%20datacite%3Adoi%20%3B%0A%20%20%20%20%20%20%20%20%20%20literal%3AhasLiteralValue%20%3Fvalue%0A%20%20%20%20%20%20%5D%20.%0A%20%20%20%20%20%20OPTIONAL%20%7B%0A%20%20%20%20%20%20%20%20%3Fpaper%20datacite%3AhasIdentifier%20%5B%0A%20%20%20%20%20%20%20%20%20%20datacite%3AusesIdentifierScheme%20datacite%3Apmid%20%3B%0A%20%20%20%20%20%20%20%20%20%20literal%3AhasLiteralValue%20%3Fpmid%0A%20%20%20%20%20%20%20%20%5D%20.%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20OPTIONAL%20%7B%0A%20%20%20%20%20%20%20%20%3Fpaper%20datacite%3AhasIdentifier%20%5B%0A%20%20%20%20%20%20%20%20%20%20datacite%3AusesIdentifierScheme%20datacite%3Apmcid%20%3B%0A%20%20%20%20%20%20%20%20%20%20literal%3AhasLiteralValue%20%3Fpmcid%0A%20%20%20%20%20%20%20%20%5D%20.%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%20.%0A%20%20%20%20VALUES%20%3Fvalue%20%7B%20%2210.1093%2Fbiomet%2F79.3.531%22%20%7D%0A%20%20%7D&format=json
@@ -57,8 +58,8 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/sparql-results+json
-      User-Agent: r-curl/4.2 crul/0.8.4 rOpenSci(citecorp/0.1.2.9100)
-      X-USER-AGENT: r-curl/4.2 crul/0.8.4 rOpenSci(citecorp/0.1.2.9100)
+      User-Agent: r-curl/4.3 crul/0.9.0 rOpenSci(citecorp/0.2.2)
+      X-USER-AGENT: r-curl/4.3 crul/0.9.0 rOpenSci(citecorp/0.2.2)
   response:
     status:
       status_code: '200'
@@ -66,7 +67,7 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Thu, 24 Oct 2019 15:57:45 GMT
+      date: Mon, 09 Dec 2019 16:15:03 GMT
       content-type: application/sparql-results+json
       content-length: '328'
       connection: keep-alive
@@ -74,9 +75,10 @@ http_interactions:
       access-control-allow-credentials: 'true'
       cf-cache-status: DYNAMIC
       server: cloudflare
-      cf-ray: 52ad25f31bda8cd9-PDX
+      cf-ray: 5428468c2d49ed63-SJC
     body:
       encoding: UTF-8
+      file: no
       string: |-
         {
           "head" : {
@@ -95,5 +97,5 @@ http_interactions:
             } ]
           }
         }
-  recorded_at: 2019-10-24 15:57:45 GMT
-  recorded_with: vcr/0.3.0, webmockr/0.4.0
+  recorded_at: 2019-12-09 16:15:03 GMT
+  recorded_with: vcr/0.4.0, webmockr/0.5.0

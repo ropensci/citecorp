@@ -8,8 +8,8 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/sparql-results+json
-      User-Agent: r-curl/4.2 crul/0.8.4 rOpenSci(citecorp/0.1.1.9100)
-      X-USER-AGENT: r-curl/4.2 crul/0.8.4 rOpenSci(citecorp/0.1.1.9100)
+      User-Agent: r-curl/4.3 crul/0.9.0 rOpenSci(citecorp/0.2.2)
+      X-USER-AGENT: r-curl/4.3 crul/0.9.0 rOpenSci(citecorp/0.2.2)
   response:
     status:
       status_code: '200'
@@ -17,7 +17,7 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Wed, 23 Oct 2019 23:36:35 GMT
+      date: Mon, 09 Dec 2019 16:15:06 GMT
       content-type: application/sparql-results+json
       content-length: '492'
       connection: keep-alive
@@ -25,9 +25,10 @@ http_interactions:
       access-control-allow-credentials: 'true'
       cf-cache-status: DYNAMIC
       server: cloudflare
-      cf-ray: 52a788b3eb7e2a11-SEA
+      cf-ray: 542846a2df47ed63-SJC
     body:
       encoding: UTF-8
+      file: no
       string: |-
         {
           "head" : {
@@ -54,5 +55,5 @@ http_interactions:
             } ]
           }
         }
-  recorded_at: 2019-10-23 23:36:35 GMT
-  recorded_with: vcr/0.3.0, webmockr/0.4.0
+  recorded_at: 2019-12-09 16:15:06 GMT
+  recorded_with: vcr/0.4.0, webmockr/0.5.0
