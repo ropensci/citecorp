@@ -34,7 +34,9 @@
 #'  "02001010806360107050663080702026306630509-0200101080636102704000806"
 #' 
 #' if (
-#' crul::ok("http://opencitations.net/index/coci/api/v1/references/10.1108/jd-12-2013-0166")
+#' crul::ok(
+#' "http://opencitations.net/index/coci/api/v1/references/10.1108/jd-12-2013-0166",
+#' timeout_ms = 1000L)
 #' ) {
 #' oc_coci_cites(doi1)
 #' }
