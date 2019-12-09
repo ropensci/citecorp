@@ -1,4 +1,4 @@
-#' Client for the Open Citations Corpus <http://opencitations.net/>
+#' Client for the Open Citations Corpus http://opencitations.net/
 #'
 #' @importFrom fauxpas http find_error_class
 #' @importFrom data.table setDF rbindlist

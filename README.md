@@ -9,7 +9,7 @@ citecorp
 [![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/citecorp)](https://github.com/metacran/cranlogs.app)
 [![cran version](https://www.r-pkg.org/badges/version/citecorp)](https://cran.r-project.org/package=citecorp)
 
-Client for the Open Citations Corpus <http://opencitations.net/> (OCC)
+Client for the Open Citations Corpus http://opencitations.net/ (OCC)
 
 OCC created their own identifiers called Open Citation Identifiers (oci), e.g., 
 
