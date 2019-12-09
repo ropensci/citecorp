@@ -43,6 +43,19 @@ oc_sparql_GET <- function(url, path, query, flatten = FALSE, ...) {
   jsonlite::fromJSON(res$parse("UTF-8"), flatten = flatten)
 }
 
+oc_sparql_OK <- function(query, ...) {
+  cli <- crul::HttpClient$new(
+    url = coci_base, opts = list(...),
+    headers = list(
+      Accept = "application/sparql-results+json",
+      "User-Agent" = oc_ua(),
+      "X-USER-AGENT" = oc_ua()
+    )
+  )
+  url <- cli$url_fetch("sparql", query = list(query = query, format = "json"))
+  crul::ok(url)
+}
+
 cp_query <- function(query, flatten = TRUE, ...) {
   oc_sparql_GET(coci_base, "sparql", query, flatten = flatten, ...)
 }

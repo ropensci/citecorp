@@ -38,7 +38,7 @@ a DOI search.
 Methods for getting IDs from other IDs
 }
 \examples{
-if (crul::ok('http://opencitations.net/sparql')) {
+if (oc_lookup_check()) {
 oc_doi2ids("10.1097/igc.0000000000000609")
 oc_doi2ids('10.1093/biomet/80.3.527')
 oc_doi2ids('10.1093/biomet/79.3.531')
