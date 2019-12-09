@@ -14,7 +14,7 @@
 
 ---
 
-This version fixes errors in parsing data, and vectorizes three functions.
+This version fixes better checks if http requests will work before running examples that require http requests.
 
 Thanks!
 Scott Chamberlain

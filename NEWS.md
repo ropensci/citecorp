@@ -1,3 +1,11 @@
+citecorp 0.2.2
+==============
+
+### BUG FIXES
+
+* better check if http requests will work before running examples that require http requests (#5)
+
+
 citecorp 0.2.0
 ==============
 
