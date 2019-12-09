@@ -36,9 +36,6 @@
 #' if (
 #' crul::ok("http://opencitations.net/index/coci/api/v1/references/10.1108/jd-12-2013-0166")
 #' ) {
-#' # references
-#' oc_coci_refs(doi1)
-#' # citations
 #' oc_coci_cites(doi1)
 #' }
 #' 

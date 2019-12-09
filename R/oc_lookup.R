@@ -35,6 +35,10 @@ oc_2ids_template <- function(template_string, id_name) {
 #' @examples
 #' if (oc_lookup_check()) {
 #' oc_doi2ids("10.1097/igc.0000000000000609")
+#' }
+#' 
+#' ### More examples
+#' \donttest{
 #' oc_doi2ids('10.1093/biomet/80.3.527')
 #' oc_doi2ids('10.1093/biomet/79.3.531')
 #' oc_pmid2ids("26645990")
