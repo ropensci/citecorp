@@ -8,19 +8,19 @@
 #' @param oci (character) a single Open Citation Identifier (OCI)
 #' @param exclude (character) a field_name; all the rows that have an empty
 #' value in the field_name specified are removed from the result set
-#' @param filter =<field_name>:<operator><value>: only the rows compliant
-#' with <value> are kept in the result set. The parameter <operation>
-#' is not mandatory. If <operation> is not specified, <value> is
+#' @param filter `=<field_name>:<operator><value>:` only the rows compliant
+#' with `<value>` are kept in the result set. The parameter `<operation>`
+#' is not mandatory. If `<operation>` is not specified, `<value>` is
 #' interpreted as a regular expression, otherwise it is compared by means
 #' of the specified operation. Possible operators are "=", "<", and ">".
-#' For instance, filter=title:semantics? returns all the rows that
+#' For instance, `filter=title:semantics?` returns all the rows that
 #' contain the string "semantic" or "semantics" in the field title,
-#' while filter=date:>2016-05 returns all the rows that have a date
+#' while `filter=date:>2016-05` returns all the rows that have a date
 #' greater than May 2016.
-#' @param sort =<order>(<field_name>): sort in ascending (<order> set to
-#' "asc") or descending (<order> set to "desc") order the rows in the
-#' result set according to the values in <field_name>. For instance,
-#' sort=desc(date) sorts all the rows according to the value specified
+#' @param sort `=<order>(<field_name>):` sort in ascending (`<order>` set to
+#' "asc") or descending (`<order>` set to "desc") order the rows in the
+#' result set according to the values in `<field_name>`. For instance,
+#' `sort=desc(date)` sorts all the rows according to the value specified
 #' in the field date in descending order.
 #' @param ... curl options passed on to [crul::verb-GET]
 #' @return data.frame, see http://opencitations.net/index/coci/api/v1 for
@@ -60,25 +60,25 @@
 #' }
 
 #' @export
-#' @name oc_coci
+#' @rdname oc_coci
 oc_coci_refs <- function(doi, exclude=NULL, filter=NULL, sort=NULL, ...) {
   oc_coci_stub("references", doi, exclude, filter, sort, ...)
 }
 
 #' @export
-#' @name oc_coci
+#' @rdname oc_coci
 oc_coci_cites <- function(doi, exclude=NULL, filter=NULL, sort=NULL, ...) {
   oc_coci_stub("citations", doi, exclude, filter, sort, ...)
 }
 
 #' @export
-#' @name oc_coci
+#' @rdname oc_coci
 oc_coci_meta <- function(doi, exclude=NULL, filter=NULL, sort=NULL, ...) {
   oc_coci_stub("metadata", doi, exclude, filter, sort, ...)
 }
 
 #' @export
-#' @name oc_coci
+#' @rdname oc_coci
 oc_coci_citation <- function(oci, ...) {
   assert(oci, "character")
   x <- oc_GET(coci_base, file.path(coci_meta, "citation", oci), ...)

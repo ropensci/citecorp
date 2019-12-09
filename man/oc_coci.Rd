@@ -23,20 +23,20 @@ oc_coci_citation(oci, ...)
 \item{exclude}{(character) a field_name; all the rows that have an empty
 value in the field_name specified are removed from the result set}
 
-\item{filter}{=<field_name>:<operator><value>: only the rows compliant
-with <value> are kept in the result set. The parameter <operation>
-is not mandatory. If <operation> is not specified, <value> is
+\item{filter}{\verb{=<field_name>:<operator><value>:} only the rows compliant
+with \verb{<value>} are kept in the result set. The parameter \verb{<operation>}
+is not mandatory. If \verb{<operation>} is not specified, \verb{<value>} is
 interpreted as a regular expression, otherwise it is compared by means
 of the specified operation. Possible operators are "=", "<", and ">".
-For instance, filter=title:semantics? returns all the rows that
+For instance, \verb{filter=title:semantics?} returns all the rows that
 contain the string "semantic" or "semantics" in the field title,
-while filter=date:>2016-05 returns all the rows that have a date
+while \verb{filter=date:>2016-05} returns all the rows that have a date
 greater than May 2016.}
 
-\item{sort}{=<order>(<field_name>): sort in ascending (<order> set to
-"asc") or descending (<order> set to "desc") order the rows in the
-result set according to the values in <field_name>. For instance,
-sort=desc(date) sorts all the rows according to the value specified
+\item{sort}{\verb{=<order>(<field_name>):} sort in ascending (\verb{<order>} set to
+"asc") or descending (\verb{<order>} set to "desc") order the rows in the
+result set according to the values in \verb{<field_name>}. For instance,
+\code{sort=desc(date)} sorts all the rows according to the value specified
 in the field date in descending order.}
 
 \item{...}{curl options passed on to \link[crul:verb-GET]{crul::verb-GET}}

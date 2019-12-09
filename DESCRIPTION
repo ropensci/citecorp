@@ -24,7 +24,7 @@ Imports:
 Suggests:
     testthat,
     vcr
-RoxygenNote: 6.1.1
+RoxygenNote: 7.0.2
 X-schema.org-applicationCategory: Literature
 X-schema.org-keywords: doi, metadata, citation, opencitations, bibtex
 X-schema.org-isPartOf: https://ropensci.org
