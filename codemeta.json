@@ -120,7 +120,7 @@
   "isPartOf": "https://ropensci.org",
   "keywords": ["doi", "metadata", "citation", "opencitations", "bibtex", "citations", "pmid", "pmcid", "sparql", "r", "r-package", "rstats"],
   "readme": "https://github.com/ropenscilabs/citecorp/blob/master/README.md",
-  "fileSize": "14.195KB",
+  "fileSize": "14.258KB",
   "contIntegration": "https://travis-ci.com/ropenscilabs/citecorp",
   "developmentStatus": "https://www.repostatus.org/#active",
   "releaseNotes": "https://github.com/ropenscilabs/citecorp/blob/master/NEWS.md",
