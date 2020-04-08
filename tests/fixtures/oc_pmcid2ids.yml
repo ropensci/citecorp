@@ -8,8 +8,8 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/sparql-results+json
-      User-Agent: r-curl/4.3 crul/0.9.0 rOpenSci(citecorp/0.2.2)
-      X-USER-AGENT: r-curl/4.3 crul/0.9.0 rOpenSci(citecorp/0.2.2)
+      User-Agent: r-curl/4.3 crul/0.9.0 rOpenSci(citecorp/0.2.2.91)
+      X-USER-AGENT: r-curl/4.3 crul/0.9.0 rOpenSci(citecorp/0.2.2.91)
   response:
     status:
       status_code: '200'
@@ -17,15 +17,17 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Mon, 09 Dec 2019 16:15:06 GMT
+      date: Wed, 08 Apr 2020 16:28:41 GMT
       content-type: application/sparql-results+json
       content-length: '492'
       connection: keep-alive
+      set-cookie: __cfduid=d44301f22f356f9b6765e1e51055f26e01586363321; expires=Fri,
+        08-May-20 16:28:41 GMT; path=/; domain=.opencitations.net; HttpOnly; SameSite=Lax
       access-control-allow-origin: '*'
       access-control-allow-credentials: 'true'
       cf-cache-status: DYNAMIC
       server: cloudflare
-      cf-ray: 542846a2df47ed63-SJC
+      cf-ray: 580d5ce51b738ce5-PDX
     body:
       encoding: UTF-8
       file: no
@@ -55,5 +57,5 @@ http_interactions:
             } ]
           }
         }
-  recorded_at: 2019-12-09 16:15:06 GMT
-  recorded_with: vcr/0.4.0, webmockr/0.5.0
+  recorded_at: 2020-04-08 16:28:41 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2

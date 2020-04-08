@@ -8,8 +8,8 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3 crul/0.9.0 rOpenSci(citecorp/0.2.2)
-      X-USER-AGENT: r-curl/4.3 crul/0.9.0 rOpenSci(citecorp/0.2.2)
+      User-Agent: r-curl/4.3 crul/0.9.0 rOpenSci(citecorp/0.2.2.91)
+      X-USER-AGENT: r-curl/4.3 crul/0.9.0 rOpenSci(citecorp/0.2.2.91)
   response:
     status:
       status_code: '200'
@@ -17,15 +17,17 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Mon, 09 Dec 2019 16:14:08 GMT
+      date: Wed, 08 Apr 2020 16:28:38 GMT
       content-type: application/json
       transfer-encoding: chunked
       connection: keep-alive
+      set-cookie: __cfduid=da8c4d153679856ba862cf9b30b13e5d31586363318; expires=Fri,
+        08-May-20 16:28:38 GMT; path=/; domain=.opencitations.net; HttpOnly; SameSite=Lax
       access-control-allow-origin: '*'
       access-control-allow-credentials: 'true'
       cf-cache-status: DYNAMIC
       server: cloudflare
-      cf-ray: 542845323d616d28-SJC
+      cf-ray: 580d5cd49cc58ce5-PDX
       content-encoding: gzip
     body:
       encoding: UTF-8
@@ -33,14 +35,14 @@ http_interactions:
       string: |-
         [
             {
-                "author_sc": "no",
+                "cited": "10.1186/ar4086",
                 "timespan": "P1Y",
-                "oci": "02001010806360107050663080702026306630509-0200101080636102704000806",
                 "citing": "10.1186/1756-8722-6-59",
                 "journal_sc": "no",
-                "cited": "10.1186/ar4086",
-                "creation": "2013"
+                "creation": "2013",
+                "oci": "02001010806360107050663080702026306630509-0200101080636102704000806",
+                "author_sc": "no"
             }
         ]
-  recorded_at: 2019-12-09 16:14:09 GMT
-  recorded_with: vcr/0.4.0, webmockr/0.5.0
+  recorded_at: 2020-04-08 16:28:39 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2
