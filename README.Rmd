@@ -42,7 +42,7 @@ install.packages("citecorp")
 Development version
 
 ```{r eval=FALSE}
-devtools::install_github("ropenscilabs/citecorp")
+remotes::install_github("ropenscilabs/citecorp")
 ```
 
 ```{r}
