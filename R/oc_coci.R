@@ -4,8 +4,8 @@
 #' AFAICT this API is a REST wrapper around the SPARQL service
 #'
 #' @name oc_coci
-#' @param doi (character) one or more Digital Object Identifiers
-#' @param oci (character) a single Open Citation Identifier (OCI)
+#' @param doi (character) one or more Digital Object Identifiers (DOIs)
+#' @param oci (character) one or more Open Citation Identifiers (OCIs)
 #' @param exclude (character) a field_name; all the rows that have an empty
 #' value in the field_name specified are removed from the result set
 #' @param filter `=<field_name>:<operator><value>:` only the rows compliant
@@ -32,6 +32,8 @@
 #' doi2 <- "10.1371/journal.pgen.1005937"
 #' oci1 <-
 #'  "02001010806360107050663080702026306630509-0200101080636102704000806"
+#' oci2 <-
+#'  "0200101000836191363010263020001036300010606-020010003083604090301050910"
 #' 
 #' if (
 #' crul::ok(
@@ -50,10 +52,12 @@
 #' oc_coci_refs(doi1, exclude = "oci")
 #' oc_coci_refs(doi1, filter = "date:>2016-05", verbose = TRUE)
 #' oc_coci_refs(doi2)
+#' oc_coci_refs(c(doi1, doi2))
 #'
 #' # citations
 #' oc_coci_cites(doi1, exclude = "oci")
 #' oc_coci_cites(doi2)
+#' oc_coci_cites(c(doi1, doi2))
 #'
 #' # metadata
 #' oc_coci_meta(doi2)
@@ -61,18 +65,21 @@
 #'
 #' # citation - an OCI instead of a DOI
 #' oc_coci_citation(oci1)
+#' oc_coci_citation(c(oci1, oci2))
 #' }
 
 #' @export
 #' @rdname oc_coci
 oc_coci_refs <- function(doi, exclude=NULL, filter=NULL, sort=NULL, ...) {
-  oc_coci_stub("references", doi, exclude, filter, sort, ...)
+  lst2df_tbl(lapply(doi, function(w)
+    oc_coci_stub("references", w, exclude, filter, sort, ...)))
 }
 
 #' @export
 #' @rdname oc_coci
 oc_coci_cites <- function(doi, exclude=NULL, filter=NULL, sort=NULL, ...) {
-  oc_coci_stub("citations", doi, exclude, filter, sort, ...)
+  lst2df_tbl(lapply(doi, function(w)
+    oc_coci_stub("citations", w, exclude, filter, sort, ...)))
 }
 
 #' @export
@@ -85,12 +92,15 @@ oc_coci_meta <- function(doi, exclude=NULL, filter=NULL, sort=NULL, ...) {
 #' @rdname oc_coci
 oc_coci_citation <- function(oci, ...) {
   assert(oci, "character")
-  x <- oc_GET(coci_base, file.path(coci_meta, "citation", oci), ...)
-  oc_coci_parser(x)
+  lst2df_tbl(lapply(oci, oc_coci_citation_one, ...))
 }
 
-
 # helpers
+oc_coci_citation_one <- function(x, ...) {
+  z <- oc_GET(coci_base, file.path(coci_meta, "citation", x), ...)
+  oc_coci_parser(z)
+}
+
 oc_coci_stub <- function(path, doi, exclude, filter, sort, ...) {
   assert(doi, "character")
   assert(exclude, "character")
@@ -105,9 +115,7 @@ oc_coci_stub <- function(path, doi, exclude, filter, sort, ...) {
 
 oc_coci_parser <- function(x) {
   x <- jsonlite::fromJSON(x, FALSE)
-  (z <- data.table::setDF(
-    data.table::rbindlist(x, fill = TRUE, use.names = TRUE)))
-  structure(z, class = c("tbl_df", "tbl", "data.frame"))
+  structure(lst2df(x), class = c("tbl_df", "tbl", "data.frame"))
 }
 
 coci_meta <- "index/coci/api/v1"

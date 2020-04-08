@@ -18,7 +18,7 @@ oc_coci_meta(doi, exclude = NULL, filter = NULL, sort = NULL, ...)
 oc_coci_citation(oci, ...)
 }
 \arguments{
-\item{doi}{(character) one or more Digital Object Identifiers}
+\item{doi}{(character) one or more Digital Object Identifiers (DOIs)}
 
 \item{exclude}{(character) a field_name; all the rows that have an empty
 value in the field_name specified are removed from the result set}
@@ -41,7 +41,7 @@ in the field date in descending order.}
 
 \item{...}{curl options passed on to \link[crul:verb-GET]{crul::verb-GET}}
 
-\item{oci}{(character) a single Open Citation Identifier (OCI)}
+\item{oci}{(character) one or more Open Citation Identifiers (OCIs)}
 }
 \value{
 data.frame, see http://opencitations.net/index/coci/api/v1 for
@@ -55,6 +55,8 @@ doi1 <- "10.1108/jd-12-2013-0166"
 doi2 <- "10.1371/journal.pgen.1005937"
 oci1 <-
  "02001010806360107050663080702026306630509-0200101080636102704000806"
+oci2 <-
+ "0200101000836191363010263020001036300010606-020010003083604090301050910"
 
 if (
 crul::ok(
@@ -73,10 +75,12 @@ try(
 oc_coci_refs(doi1, exclude = "oci")
 oc_coci_refs(doi1, filter = "date:>2016-05", verbose = TRUE)
 oc_coci_refs(doi2)
+oc_coci_refs(c(doi1, doi2))
 
 # citations
 oc_coci_cites(doi1, exclude = "oci")
 oc_coci_cites(doi2)
+oc_coci_cites(c(doi1, doi2))
 
 # metadata
 oc_coci_meta(doi2)
@@ -84,6 +88,7 @@ oc_coci_meta(c(doi1, doi2))
 
 # citation - an OCI instead of a DOI
 oc_coci_citation(oci1)
+oc_coci_citation(c(oci1, oci2))
 }
 }
 \references{

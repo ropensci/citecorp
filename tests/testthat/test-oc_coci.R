@@ -1,7 +1,10 @@
 doi1 <- "10.1108/jd-12-2013-0166"
 doi2 <- "10.6084/m9.figshare.3443876"
+doi3 <- "10.1371/journal.pgen.1005937"
 oci1 <-
   "02001010806360107050663080702026306630509-0200101080636102704000806"
+oci2 <-
+  "0200101000836191363010263020001036300010606-020010003083604090301050910"
 
 context("oc_coci_refs")
 test_that("oc_coci_refs works", {
@@ -24,6 +27,12 @@ test_that("oc_coci_refs works", {
   expect_equal(length(unique(x$citing)), 1)
   # all cited are other DOIs
   expect_false(any(grepl(doi1, x$cited)))
+})
+test_that("oc_coci_refs - many dois", {
+  vcr::use_cassette("oc_coci_refs_many_dois", {
+    x <- oc_coci_refs(c(doi1, doi3))
+  })
+  expect_equal(sort(unique(x$citing)), sort(c(doi1, doi3)))
 })
 test_that("oc_coci_refs fails well", {
   expect_error(oc_coci_refs(), "argument \"doi\" is missing")
@@ -53,6 +62,12 @@ test_that("oc_coci_cites works", {
   # all citing equal DOI passed in
   expect_false(any(grepl(doi1, x$citing)))
 })
+test_that("oc_coci_cites - many dois", {
+  vcr::use_cassette("oc_coci_cites_many_dois", {
+    x <- oc_coci_cites(c(doi1, doi3))
+  })
+  expect_equal(sort(unique(x$cited)), sort(c(doi1, doi3)))
+})
 test_that("oc_coci_cites fails well", {
   expect_error(oc_coci_cites(), "argument \"doi\" is missing")
   expect_error(oc_coci_cites(5), "doi must be of class")
@@ -79,6 +94,12 @@ test_that("oc_coci_meta works", {
 
   # matches passed in DOI
   expect_match(x$doi, doi1)
+})
+test_that("oc_coci_meta - many dois", {
+  vcr::use_cassette("oc_coci_meta_many_dois", {
+    x <- oc_coci_meta(c(doi1, doi3))
+  })
+  expect_equal(NROW(x), 2)
 })
 test_that("oc_coci_meta fails well", {
   expect_error(oc_coci_meta(), "argument \"doi\" is missing")
@@ -111,6 +132,12 @@ test_that("oc_coci_citation works", {
   
   # citing equals OCI passed in
   expect_match(oci1, x$oci)
+})
+test_that("oc_coci_citation - many dois", {
+  vcr::use_cassette("oc_coci_citation_many_dois", {
+    x <- oc_coci_citation(c(oci1, oci2))
+  })
+  expect_equal(NROW(x), 2)
 })
 test_that("oc_coci_citation fails well", {
   expect_error(oc_coci_citation(), "argument \"oci\" is missing")

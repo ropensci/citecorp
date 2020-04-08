@@ -8,8 +8,8 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3 crul/0.9.0 rOpenSci(citecorp/0.2.2.91)
-      X-USER-AGENT: r-curl/4.3 crul/0.9.0 rOpenSci(citecorp/0.2.2.91)
+      User-Agent: r-curl/4.3 crul/0.9.0 rOpenSci(citecorp/0.2.2.94)
+      X-USER-AGENT: r-curl/4.3 crul/0.9.0 rOpenSci(citecorp/0.2.2.94)
   response:
     status:
       status_code: '200'
@@ -17,17 +17,17 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Wed, 08 Apr 2020 16:28:38 GMT
+      date: Wed, 08 Apr 2020 17:00:12 GMT
       content-type: application/json
       transfer-encoding: chunked
       connection: keep-alive
-      set-cookie: __cfduid=d72f58dc487cc32bbf167cd83a98baeac1586363316; expires=Fri,
-        08-May-20 16:28:36 GMT; path=/; domain=.opencitations.net; HttpOnly; SameSite=Lax
+      set-cookie: __cfduid=d8914ab1bebdcb5331f9f3d0c3615f2361586365210; expires=Fri,
+        08-May-20 17:00:10 GMT; path=/; domain=.opencitations.net; HttpOnly; SameSite=Lax
       access-control-allow-origin: '*'
       access-control-allow-credentials: 'true'
       cf-cache-status: DYNAMIC
       server: cloudflare
-      cf-ray: 580d5cc75f618ce5-PDX
+      cf-ray: 580d8b057e46fda1-PDX
       content-encoding: gzip
     body:
       encoding: UTF-8
@@ -50,5 +50,5 @@ http_interactions:
                 "title": "Setting Our Bibliographic References Free: Towards Open Citation Data"
             }
         ]
-  recorded_at: 2020-04-08 16:28:38 GMT
+  recorded_at: 2020-04-08 17:00:12 GMT
   recorded_with: vcr/0.5.4, webmockr/0.6.2

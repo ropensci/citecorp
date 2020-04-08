@@ -27,7 +27,7 @@ http_interactions:
       access-control-allow-credentials: 'true'
       cf-cache-status: DYNAMIC
       server: cloudflare
-      cf-ray: 580d8afccc8efda1-PDX
+      cf-ray: 580d8b001bc5fda1-PDX
       content-encoding: gzip
     body:
       encoding: UTF-8
@@ -215,5 +215,205 @@ http_interactions:
                 "author_sc": "no"
             }
         ]
-  recorded_at: 2020-04-08 17:00:09 GMT
+  recorded_at: 2020-04-08 17:00:10 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2
+- request:
+    method: get
+    uri: http://opencitations.net/index/coci/api/v1/citations/10.1371/journal.pgen.1005937
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/4.3 crul/0.9.0 rOpenSci(citecorp/0.2.2.94)
+      X-USER-AGENT: r-curl/4.3 crul/0.9.0 rOpenSci(citecorp/0.2.2.94)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      date: Wed, 08 Apr 2020 17:00:10 GMT
+      content-type: application/json
+      transfer-encoding: chunked
+      connection: keep-alive
+      set-cookie: __cfduid=de1343908596eefb274d498ac35b745941586365209; expires=Fri,
+        08-May-20 17:00:09 GMT; path=/; domain=.opencitations.net; HttpOnly; SameSite=Lax
+      access-control-allow-origin: '*'
+      access-control-allow-credentials: 'true'
+      cf-cache-status: DYNAMIC
+      server: cloudflare
+      cf-ray: 580d8b02581cfda1-PDX
+      content-encoding: gzip
+    body:
+      encoding: UTF-8
+      file: no
+      string: |-
+        [
+            {
+                "cited": "10.1371/journal.pgen.1005937",
+                "timespan": "P2Y6M10D",
+                "citing": "10.1177/1933719118802056",
+                "journal_sc": "no",
+                "creation": "2018-10-11",
+                "oci": "020010107073601090303070109010108080002000506-02001030701361924302723102137251614233701000005090307",
+                "author_sc": "no"
+            },
+            {
+                "cited": "10.1371/journal.pgen.1005937",
+                "timespan": "P1Y11M",
+                "citing": "10.1096/fj.201700854rr",
+                "journal_sc": "no",
+                "creation": "2018-03",
+                "oci": "02001000906361519370200010700000805042727-02001030701361924302723102137251614233701000005090307",
+                "author_sc": "no"
+            },
+            {
+                "cited": "10.1371/journal.pgen.1005937",
+                "timespan": "P2Y10M",
+                "citing": "10.1096/fj.201801752",
+                "journal_sc": "no",
+                "creation": "2019-02",
+                "oci": "0200100090636151937020001080001070502-02001030701361924302723102137251614233701000005090307",
+                "author_sc": "no"
+            },
+            {
+                "cited": "10.1371/journal.pgen.1005937",
+                "timespan": "P2Y5M",
+                "citing": "10.2217/epi-2018-0006",
+                "journal_sc": "no",
+                "creation": "2018-09",
+                "oci": "020020201073614251863020001086300000006-02001030701361924302723102137251614233701000005090307",
+                "author_sc": "no"
+            },
+            {
+                "cited": "10.1371/journal.pgen.1005937",
+                "timespan": "P2Y9M22D",
+                "citing": "10.1002/dvg.23281",
+                "journal_sc": "no",
+                "creation": "2019-01-23",
+                "oci": "0200100000236133116370203020801-02001030701361924302723102137251614233701000005090307",
+                "author_sc": "no"
+            },
+            {
+                "cited": "10.1371/journal.pgen.1005937",
+                "timespan": "P1Y9M14D",
+                "citing": "10.1101/246397",
+                "journal_sc": "no",
+                "creation": "2018-01-15",
+                "oci": "0200101000136020406030907-02001030701361924302723102137251614233701000005090307",
+                "author_sc": "no"
+            },
+            {
+                "cited": "10.1371/journal.pgen.1005937",
+                "timespan": "P1Y11M27D",
+                "citing": "10.1101/290502",
+                "journal_sc": "no",
+                "creation": "2018-03-28",
+                "oci": "0200101000136020900050002-02001030701361924302723102137251614233701000005090307",
+                "author_sc": "no"
+            },
+            {
+                "cited": "10.1371/journal.pgen.1005937",
+                "timespan": "P1Y7M24D",
+                "citing": "10.1093/biolre/iox161",
+                "journal_sc": "no",
+                "creation": "2017-11-25",
+                "oci": "020010009033611182421271436182433010601-02001030701361924302723102137251614233701000005090307",
+                "author_sc": "no"
+            },
+            {
+                "cited": "10.1371/journal.pgen.1005937",
+                "timespan": "P1Y4M16D",
+                "citing": "10.1093/molehr/gax045",
+                "journal_sc": "no",
+                "creation": "2017-08-17",
+                "oci": "020010009033622242114172736161033000405-02001030701361924302723102137251614233701000005090307",
+                "author_sc": "no"
+            },
+            {
+                "cited": "10.1371/journal.pgen.1005937",
+                "timespan": "P2Y10M15D",
+                "citing": "10.1093/molehr/gaz006",
+                "journal_sc": "no",
+                "creation": "2019-02-16",
+                "oci": "020010009033622242114172736161035000006-02001030701361924302723102137251614233701000005090307",
+                "author_sc": "no"
+            },
+            {
+                "cited": "10.1371/journal.pgen.1005937",
+                "timespan": "P2Y9M27D",
+                "citing": "10.1111/aji.13082",
+                "journal_sc": "no",
+                "creation": "2019-01-28",
+                "oci": "0200101010136101918370103000802-02001030701361924302723102137251614233701000005090307",
+                "author_sc": "no"
+            },
+            {
+                "cited": "10.1371/journal.pgen.1005937",
+                "timespan": "P3Y0M29D",
+                "citing": "10.1093/humrep/dez041",
+                "journal_sc": "no",
+                "creation": "2019-04-30",
+                "oci": "020010009033617302227142536131435000401-02001030701361924302723102137251614233701000005090307",
+                "author_sc": "no"
+            },
+            {
+                "cited": "10.1371/journal.pgen.1005937",
+                "timespan": "P3Y2M28D",
+                "citing": "10.1007/s00109-019-01809-6",
+                "journal_sc": "no",
+                "creation": "2019-06-29",
+                "oci": "0200100000736280000010009630001096300010800096306-02001030701361924302723102137251614233701000005090307",
+                "author_sc": "no"
+            },
+            {
+                "cited": "10.1371/journal.pgen.1005937",
+                "timespan": "P2Y8M18D",
+                "citing": "10.1371/journal.pgen.1007813",
+                "journal_sc": "yes",
+                "creation": "2018-12-19",
+                "oci": "02001030701361924302723102137251614233701000007080103-02001030701361924302723102137251614233701000005090307",
+                "author_sc": "no"
+            },
+            {
+                "cited": "10.1371/journal.pgen.1005937",
+                "timespan": "P2Y4M23D",
+                "citing": "10.1371/journal.pbio.2005594",
+                "journal_sc": "no",
+                "creation": "2018-08-24",
+                "oci": "02001030701361924302723102137251118243702000005050904-02001030701361924302723102137251614233701000005090307",
+                "author_sc": "no"
+            },
+            {
+                "cited": "10.1371/journal.pgen.1005937",
+                "timespan": "P3Y4M18D",
+                "citing": "10.1038/s41598-019-48333-8",
+                "journal_sc": "no",
+                "creation": "2019-08-19",
+                "oci": "0200100030836280401050908630001096304080303036308-02001030701361924302723102137251614233701000005090307",
+                "author_sc": "no"
+            },
+            {
+                "cited": "10.1371/journal.pgen.1005937",
+                "timespan": "P2Y11M27D",
+                "citing": "10.1002/bies.201800188",
+                "journal_sc": "no",
+                "creation": "2019-03-28",
+                "oci": "02001000002361118142837020001080000010808-02001030701361924302723102137251614233701000005090307",
+                "author_sc": "no"
+            },
+            {
+                "cited": "10.1371/journal.pgen.1005937",
+                "timespan": "P3Y4M4D",
+                "citing": "10.3390/ijms20153822",
+                "journal_sc": "no",
+                "creation": "2019-08-05",
+                "oci": "0200303090036181922280200010503080202-02001030701361924302723102137251614233701000005090307",
+                "author_sc": "no"
+            }
+        ]
+  recorded_at: 2020-04-08 17:00:10 GMT
   recorded_with: vcr/0.5.4, webmockr/0.6.2
