@@ -5,9 +5,6 @@
 \alias{citecorp-package}
 \alias{citecorp}
 \title{Client for the Open Citations Corpus http://opencitations.net/}
-\description{
-Client for the Open Citations Corpus http://opencitations.net/
-}
 \author{
 Scott Chamberlain \email{myrmecocystus@gmail.com}
 }
