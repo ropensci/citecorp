@@ -1,5 +1,5 @@
-#' Client for the Open Citations Corpus http://opencitations.net/
-#'
+#' @title citecorp
+#' @description Client for the Open Citations Corpus http://opencitations.net/
 #' @importFrom fauxpas http find_error_class
 #' @importFrom data.table setDF rbindlist
 #' @importFrom jsonlite fromJSON
