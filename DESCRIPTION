@@ -23,7 +23,9 @@ Imports:
     jsonlite
 Suggests:
     testthat,
-    vcr
+    vcr,
+    webmockr
+Remotes: sckott/httpcode, ropensci/fauxpas
 RoxygenNote: 7.1.0
 X-schema.org-applicationCategory: Literature
 X-schema.org-keywords: doi, metadata, citation, opencitations, bibtex

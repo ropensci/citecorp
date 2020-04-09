@@ -3,6 +3,10 @@ sudo: false
 cache: packages
 dist: trusty
 
+r_github_packages:
+  - sckott/httpcode
+  - ropensci/fauxpas
+
 r_binary_packages:
   - covr
 

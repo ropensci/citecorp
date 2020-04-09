@@ -143,3 +143,21 @@ test_that("oc_coci_citation fails well", {
   expect_error(oc_coci_citation(), "argument \"oci\" is missing")
   expect_error(oc_coci_citation(5), "oci must be of class")
 })
+
+
+context("cloudflare errors")
+test_that("citecorp catches cloudflare errors", {
+  webmockr::enable()
+  
+  stub=webmockr::stub_request("get",
+    "http://opencitations.net/index/coci/api/v1/citations/10.1108/jd-12-2013-0166")
+  webmockr::to_return(stub, status = 520)
+  expect_error(oc_coci_cites(doi1), class = "http_520")
+
+  stub2=webmockr::stub_request("get",
+    "http://opencitations.net/index/coci/api/v1/citations/10.1371/journal.pgen.1005937")
+  webmockr::to_return(stub2, status = 524)
+  expect_error(oc_coci_cites(doi3), class = "http_524")
+
+  webmockr::disable()
+})
