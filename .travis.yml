@@ -13,13 +13,12 @@ r_binary_packages:
 jobs:
   include:
     - os: linux
+      r: oldrel
+    - os: linux
       r: release
       env: R_CODECOV=true
-    - os: linux
-      r: devel
-      env: _R_CHECK_LENGTH_1_LOGIC2_=TRUE
 
-r_check_args: "--as-cran --run-dontrun"
+r_check_args: "--as-cran --run-dontrun --no-build-vignettes --no-manual"
 
 after_success:
   - if [[ "${R_CODECOV}" ]]; then R -e 'covr::codecov()'; fi
