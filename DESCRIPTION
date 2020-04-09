@@ -19,7 +19,7 @@ LazyData: yes
 Imports:
     crul (>= 0.7.0),
     data.table,
-    fauxpas,
+    fauxpas (>= 0.2.1.94),
     jsonlite
 Suggests:
     testthat,
