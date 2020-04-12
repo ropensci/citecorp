@@ -4,7 +4,7 @@ Title: Client for the Open Citations Corpus
 Description: Client for the Open Citations Corpus (<http://opencitations.net/>).
     Includes a set of functions for getting one identifier type from another,
     as well as getting references and citations for a given identifier.
-Version: 0.2.2.94
+Version: 0.2.2.95
 Authors@R: person("Scott", "Chamberlain", role = c("aut", "cre"),
     email = "myrmecocystus@gmail.com", 
     comment = c(ORCID = "0000-0003-1444-9135"))
@@ -19,13 +19,13 @@ LazyData: yes
 Imports:
     crul (>= 0.7.0),
     data.table,
-    fauxpas (>= 0.2.1.94),
+    fauxpas (>= 0.3.0),
     jsonlite
 Suggests:
     testthat,
     vcr,
     webmockr
-Remotes: sckott/httpcode, ropensci/fauxpas
+Remotes: ropensci/fauxpas
 RoxygenNote: 7.1.0
 X-schema.org-applicationCategory: Literature
 X-schema.org-keywords: doi, metadata, citation, opencitations, bibtex
