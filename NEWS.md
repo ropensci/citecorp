@@ -1,3 +1,15 @@
+citecorp 0.3.0
+==============
+
+### NEW FEATURES
+
+* `oc_coci_refs()`, `oc_coci_cites()`, and `oc_coci_citation()` now support more than one DOI or COCI identifier passed in. `oc_coci_meta()` already supported more than one identifier; now all four `oc_coci*` methods support more than one identifier. The caveat is that the API route behindn `oc_coci_meta()` supports >1 identifier in a single http request - whereas the API routes behind the other functions only support one identifier per request, so they make an http request for each identifier passed in (#6)
+
+### MINOR IMPROVEMENTS
+
+* added tests for Cloudflare http status codes (#7)
+
+
 citecorp 0.2.2
 ==============
 
