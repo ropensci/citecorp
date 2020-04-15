@@ -3,9 +3,6 @@ os: linux
 cache: packages
 dist: trusty
 
-r_github_packages:
-  - ropensci/fauxpas
-
 r_binary_packages:
   - covr
 
