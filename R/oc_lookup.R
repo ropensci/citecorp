@@ -41,7 +41,7 @@ oc_2ids_template <- function(template_string, id_name) {
 #' }
 #' 
 #' ### More examples
-#' \donttest{
+#' \dontrun{
 #' oc_doi2ids('10.1093/biomet/80.3.527')
 #' oc_doi2ids('10.1093/biomet/79.3.531')
 #' oc_pmid2ids("26645990")

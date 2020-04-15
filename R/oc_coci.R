@@ -47,7 +47,7 @@
 #' }
 #' 
 #' ### More examples
-#' \donttest{
+#' \dontrun{
 #' # references
 #' oc_coci_refs(doi1, exclude = "oci")
 #' oc_coci_refs(doi1, filter = "date:>2016-05", verbose = TRUE)
