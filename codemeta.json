@@ -7,17 +7,16 @@
   "identifier": "citecorp",
   "description": "Client for the Open Citations Corpus (<http://opencitations.net/>).\n    Includes a set of functions for getting one identifier type from another,\n    as well as getting references and citations for a given identifier.",
   "name": "citecorp: Client for the Open Citations Corpus",
-  "codeRepository": "https://github.com/ropenscilabs/citecorp",
-  "issueTracker": "https://github.com/ropenscilabs/citecorp/issues",
+  "codeRepository": "https://github.com/ropensci/citecorp",
+  "issueTracker": "https://github.com/ropensci/citecorp/issues",
   "license": "https://spdx.org/licenses/MIT",
   "version": "0.3.0",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
-    "version": "3.6.3",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 3.6.3 Patched (2020-03-11 r78210)",
+  "runtimePlatform": "R version 4.0.2 Patched (2020-06-30 r78761)",
   "author": [
     {
       "@type": "Person",
@@ -132,11 +131,11 @@
   "applicationCategory": "Literature",
   "isPartOf": "https://ropensci.org",
   "keywords": ["doi", "metadata", "citation", "opencitations", "bibtex", "citations", "pmid", "pmcid", "sparql", "r", "r-package", "rstats"],
-  "readme": "https://github.com/ropenscilabs/citecorp/blob/master/README.md",
-  "fileSize": "20.139KB",
-  "contIntegration": "https://travis-ci.com/ropenscilabs/citecorp",
+  "readme": "https://github.com/ropensci/citecorp/blob/master/README.md",
+  "fileSize": "0KB",
+  "contIntegration": "https://travis-ci.com/ropensci/citecorp",
   "developmentStatus": "https://www.repostatus.org/#active",
-  "releaseNotes": "https://github.com/ropenscilabs/citecorp/blob/master/NEWS.md",
+  "releaseNotes": "https://github.com/ropensci/citecorp/blob/master/NEWS.md",
   "provider": {
     "@id": "https://cran.r-project.org",
     "@type": "Organization",
