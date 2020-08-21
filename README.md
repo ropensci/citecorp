@@ -5,7 +5,7 @@ citecorp
 
 [![cran checks](https://cranchecks.info/badges/worst/citecorp)](https://cranchecks.info/pkgs/citecorp)
 [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
-[![Build Status](https://travis-ci.com/ropenscilabs/citecorp.svg?branch=master)](https://travis-ci.com/ropenscilabs/citecorp)
+[![Build Status](https://travis-ci.com/ropensci/citecorp.svg?branch=master)](https://travis-ci.com/ropensci/citecorp)
 [![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/citecorp)](https://github.com/metacran/cranlogs.app)
 [![cran version](https://www.r-pkg.org/badges/version/citecorp)](https://cran.r-project.org/package=citecorp)
 
@@ -37,7 +37,7 @@ Development version
 
 
 ```r
-remotes::install_github("ropenscilabs/citecorp")
+remotes::install_github("ropensci/citecorp")
 ```
 
 
@@ -100,65 +100,56 @@ doi1 <- "10.1108/jd-12-2013-0166"
 # references
 oc_coci_refs(doi1)
 #> # A tibble: 37 x 7
-#>    cited         timespan citing    journal_sc creation oci            author_sc
-#>  * <chr>         <chr>    <chr>     <chr>      <chr>    <chr>          <chr>    
-#>  1 10.1001/jama… P9Y2M5D  10.1108/… no         2015-03… 0200101000836… no       
-#>  2 10.1002/asi.… P41Y8M   10.1108/… no         2015-03… 0200101000836… no       
-#>  3 10.1002/(sic… P25Y6M   10.1108/… no         2015-03… 0200101000836… no       
-#>  4 10.1007/bf02… P17Y2M   10.1108/… no         2015-03… 0200101000836… no       
-#>  5 10.1007/s105… P2Y2M3D  10.1108/… no         2015-03… 0200101000836… no       
-#>  6 10.1007/s111… P5Y8M27D 10.1108/… no         2015-03… 0200101000836… no       
-#>  7 10.1016/j.we… P2Y3M    10.1108/… no         2015-03… 0200101000836… no       
-#>  8 10.1016/j.we… P1Y10M   10.1108/… no         2015-03… 0200101000836… no       
-#>  9 10.1023/a:10… P12Y     10.1108/… no         2015-03… 0200101000836… no       
-#> 10 10.1038/3507… P13Y10M  10.1108/… no         2015-03… 0200101000836… no       
+#>    journal_sc author_sc timespan citing    oci             cited        creation
+#>  * <chr>      <chr>     <chr>    <chr>     <chr>           <chr>        <chr>   
+#>  1 no         no        P9Y2M5D  10.1108/… 02001010008361… 10.1001/jam… 2015-03…
+#>  2 no         no        P41Y8M   10.1108/… 02001010008361… 10.1002/asi… 2015-03…
+#>  3 no         no        P25Y6M   10.1108/… 02001010008361… 10.1002/(si… 2015-03…
+#>  4 no         no        P17Y2M   10.1108/… 02001010008361… 10.1007/bf0… 2015-03…
+#>  5 no         no        P2Y2M3D  10.1108/… 02001010008361… 10.1007/s10… 2015-03…
+#>  6 no         no        P5Y8M27D 10.1108/… 02001010008361… 10.1007/s11… 2015-03…
+#>  7 no         no        P2Y3M    10.1108/… 02001010008361… 10.1016/j.w… 2015-03…
+#>  8 no         no        P1Y10M   10.1108/… 02001010008361… 10.1016/j.w… 2015-03…
+#>  9 no         no        P12Y     10.1108/… 02001010008361… 10.1023/a:1… 2015-03…
+#> 10 no         no        P13Y10M  10.1108/… 02001010008361… 10.1038/350… 2015-03…
 #> # … with 27 more rows
 # citations
 oc_coci_cites(doi1)
-#> # A tibble: 20 x 7
-#>    cited     timespan  citing    journal_sc creation oci               author_sc
-#>  * <chr>     <chr>     <chr>     <chr>      <chr>    <chr>             <chr>    
-#>  1 10.1108/… P3Y       10.1145/… no         2018     0200101040536030… no       
-#>  2 10.1108/… P2Y5M     10.1057/… no         2017-08  0200100050736280… no       
-#>  3 10.1108/… P4Y1M1D   10.3233/… no         2019-04… 0200302030336132… no       
-#>  4 10.1108/… P4Y5M10D  10.3233/… no         2019-08… 0200302030336132… no       
-#>  5 10.1108/… P1Y0M14D  10.3233/… no         2016-03… 0200302030336283… no       
-#>  6 10.1108/… P3Y10M12D 10.3233/… no         2019-01… 0200302030336283… no       
-#>  7 10.1108/… P3Y6M     10.1142/… no         2018-09  0200101040236280… no       
-#>  8 10.1108/… P2Y11M20D 10.7554/… no         2018-03… 0200705050436142… no       
-#>  9 10.1108/… P0Y       10.3346/… no         2015     0200303040636192… no       
-#> 10 10.1108/… P3Y       10.1007/… no         2018     0200100000736090… no       
-#> 11 10.1108/… P2Y3M4D   10.1093/… no         2017-06… 0200100090336111… no       
-#> 12 10.1108/… P2Y       10.1007/… no         2017     0200100000736090… no       
-#> 13 10.1108/… P3Y11M    10.1186/… no         2019-02  0200101080636280… no       
-#> 14 10.1108/… P3Y       10.1007/… no         2018     0200100000736090… no       
-#> 15 10.1108/… P3Y       10.1007/… no         2018     0200100000736090… no       
-#> 16 10.1108/… P0Y       10.1007/… no         2015     0200100000736090… no       
-#> 17 10.1108/… P2Y       10.1007/… no         2017     0200100000736090… no       
-#> 18 10.1108/… P2Y9M12D  10.1007/… no         2017-12… 0200100000736090… no       
-#> 19 10.1108/… P1Y11M5D  10.1101/… no         2017-02… 0200101000136010… no       
-#> 20 10.1108/… P1Y4M1D   10.1177/… no         2016-07… 0200101070736000… no
+#> # A tibble: 23 x 7
+#>    journal_sc author_sc timespan  citing     oci               cited    creation
+#>  * <chr>      <chr>     <chr>     <chr>      <chr>             <chr>    <chr>   
+#>  1 no         no        P3Y       10.1145/3… 0200101040536030… 10.1108… 2018    
+#>  2 no         no        P2Y5M     10.1057/s… 0200100050736280… 10.1108… 2017-08 
+#>  3 no         no        P4Y1M1D   10.3233/d… 0200302030336132… 10.1108… 2019-04…
+#>  4 no         no        P4Y5M10D  10.3233/d… 0200302030336132… 10.1108… 2019-08…
+#>  5 no         no        P1Y0M14D  10.3233/s… 0200302030336283… 10.1108… 2016-03…
+#>  6 no         no        P3Y10M12D 10.3233/s… 0200302030336283… 10.1108… 2019-01…
+#>  7 no         no        P3Y6M     10.1142/s… 0200101040236280… 10.1108… 2018-09 
+#>  8 no         no        P2Y11M20D 10.7554/e… 0200705050436142… 10.1108… 2018-03…
+#>  9 no         no        P0Y       10.3346/j… 0200303040636192… 10.1108… 2015    
+#> 10 no         no        P3Y       10.1007/9… 0200100000736090… 10.1108… 2018    
+#> # … with 13 more rows
 # metadata
 oc_coci_meta(doi1)
 #> # A tibble: 1 x 13
-#>   issue oa_link citation_count author source_title citation source_id volume
-#> * <chr> <chr>   <chr>          <chr>  <chr>        <chr>    <chr>     <chr> 
-#> 1 2     http:/… 20             Peron… Journal Of … 10.1145… issn:002… 71    
-#> # … with 5 more variables: year <chr>, page <chr>, doi <chr>, reference <chr>,
-#> #   title <chr>
+#>   doi   reference issue source_id citation page  volume author citation_count
+#> * <chr> <chr>     <chr> <chr>     <chr>    <chr> <chr>  <chr>  <chr>         
+#> 1 10.1… 10.1001/… 2     issn:002… 10.1145… 253-… 71     Peron… 23            
+#> # … with 4 more variables: year <chr>, source_title <chr>, title <chr>,
+#> #   oa_link <chr>
 ```
 
 
 ## Meta
 
-* Please [report any issues or bugs](https://github.com/ropenscilabs/citecorp/issues)
+* Please [report any issues or bugs](https://github.com/ropensci/citecorp/issues)
 * License: MIT
 * Get citation information for `citecorp` in R doing `citation(package = 'citecorp')`
 * Please note that this project is released with a [Contributor Code of Conduct][coc].
 By participating in this project you agree to abide by its terms.
 
-[sparqldsl]: https://github.com/ropenscilabs/sparqldsl
-[coc]: https://github.com/ropenscilabs/citecorp/blob/master/CODE_OF_CONDUCT.md
+[sparqldsl]: https://github.com/ropensci/sparqldsl
+[coc]: https://github.com/ropensci/citecorp/blob/master/CODE_OF_CONDUCT.md
 
 
 [![rofooter](https://ropensci.org/public_images/github_footer.png)](https://ropensci.org)

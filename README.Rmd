@@ -12,7 +12,7 @@ knitr::opts_chunk$set(
 
 [![cran checks](https://cranchecks.info/badges/worst/citecorp)](https://cranchecks.info/pkgs/citecorp)
 [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
-[![Build Status](https://travis-ci.com/ropenscilabs/citecorp.svg?branch=master)](https://travis-ci.com/ropenscilabs/citecorp)
+[![Build Status](https://travis-ci.com/ropensci/citecorp.svg?branch=master)](https://travis-ci.com/ropensci/citecorp)
 [![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/citecorp)](https://github.com/metacran/cranlogs.app)
 [![cran version](https://www.r-pkg.org/badges/version/citecorp)](https://cran.r-project.org/package=citecorp)
 
@@ -42,7 +42,7 @@ install.packages("citecorp")
 Development version
 
 ```{r eval=FALSE}
-remotes::install_github("ropenscilabs/citecorp")
+remotes::install_github("ropensci/citecorp")
 ```
 
 ```{r}
@@ -83,14 +83,14 @@ oc_coci_meta(doi1)
 
 ## Meta
 
-* Please [report any issues or bugs](https://github.com/ropenscilabs/citecorp/issues)
+* Please [report any issues or bugs](https://github.com/ropensci/citecorp/issues)
 * License: MIT
 * Get citation information for `citecorp` in R doing `citation(package = 'citecorp')`
 * Please note that this project is released with a [Contributor Code of Conduct][coc].
 By participating in this project you agree to abide by its terms.
 
-[sparqldsl]: https://github.com/ropenscilabs/sparqldsl
-[coc]: https://github.com/ropenscilabs/citecorp/blob/master/CODE_OF_CONDUCT.md
+[sparqldsl]: https://github.com/ropensci/sparqldsl
+[coc]: https://github.com/ropensci/citecorp/blob/master/CODE_OF_CONDUCT.md
 
 
 [![rofooter](https://ropensci.org/public_images/github_footer.png)](https://ropensci.org)
