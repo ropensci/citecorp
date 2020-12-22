@@ -37,6 +37,11 @@ jobs:
           path: ${{ env.R_LIBS_USER }}
           key: ${{ runner.os }}-r-${{ matrix.config.r }}-${{ hashFiles('DESCRIPTION') }}
 
+      - name: Install pak
+        run: |
+          install.packages("pak", repos = "https://r-lib.github.io/p/pak/dev/")
+        shell: Rscript {0}
+
       - name: Install system dependencies
         if: runner.os == 'Linux'
         env:
