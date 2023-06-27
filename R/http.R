@@ -57,5 +57,5 @@ oc_sparql_OK <- function(query) {
 }
 
 cp_query <- function(query, flatten = TRUE, ...) {
-  oc_sparql_GET(coci_base, "sparql", query, flatten = flatten, ...)
+  oc_sparql_GET(coci_base, "meta/sparql", query, flatten = flatten, ...)
 }
