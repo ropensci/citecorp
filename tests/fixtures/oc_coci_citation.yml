@@ -1,15 +1,15 @@
 http_interactions:
 - request:
     method: get
-    uri: http://opencitations.net/index/coci/api/v1/citation/02001010806360107050663080702026306630509-0200101080636102704000806
+    uri: http://opencitations.net/index/coci/api/v1/citation/06180334099-06101759895
     body:
       encoding: ''
       string: ''
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3 crul/0.9.0 rOpenSci(citecorp/0.2.2.94)
-      X-USER-AGENT: r-curl/4.3 crul/0.9.0 rOpenSci(citecorp/0.2.2.94)
+      User-Agent: r-curl/5.2.2 crul/1.5.0 rOpenSci(citecorp/0.3.0.94)
+      X-USER-AGENT: r-curl/5.2.2 crul/1.5.0 rOpenSci(citecorp/0.3.0.94)
   response:
     status:
       status_code: '200'
@@ -17,32 +17,30 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Wed, 08 Apr 2020 17:00:15 GMT
-      content-type: application/json
-      transfer-encoding: chunked
-      connection: keep-alive
-      set-cookie: __cfduid=d2cebc77084341e9eb9f5b6768ec156ee1586365215; expires=Fri,
-        08-May-20 17:00:15 GMT; path=/; domain=.opencitations.net; HttpOnly; SameSite=Lax
       access-control-allow-origin: '*'
       access-control-allow-credentials: 'true'
-      cf-cache-status: DYNAMIC
-      server: cloudflare
-      cf-ray: 580d8b24fd30fda1-PDX
-      content-encoding: gzip
+      content-type: application/json
+      access-control-allow-methods: '*'
+      access-control-allow-headers: Authorization
+      set-cookie: webpy_session_id=2f26bb963f72e03b110e7cb87d3020f5a500154b; Path=/;
+        httponly
+      content-length: '263'
+      date: Thu, 17 Oct 2024 16:13:35 GMT
+      server: lighttpd/1.4.53
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
       string: |-
         [
             {
-                "cited": "10.1186/ar4086",
-                "timespan": "P1Y",
-                "citing": "10.1186/1756-8722-6-59",
+                "timespan": "P1Y10M10D",
+                "citing": "10.1108/jd-12-2013-0166",
+                "creation": "2015-03-09",
+                "oci": "06180334099-06101759895",
+                "author_sc": "no",
                 "journal_sc": "no",
-                "creation": "2013",
-                "oci": "02001010806360107050663080702026306630509-0200101080636102704000806",
-                "author_sc": "no"
+                "cited": "10.5539/ass.v9n5p18"
             }
         ]
-  recorded_at: 2020-04-08 17:00:16 GMT
-  recorded_with: vcr/0.5.4, webmockr/0.6.2
+  recorded_at: 2024-10-17 16:13:35 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0

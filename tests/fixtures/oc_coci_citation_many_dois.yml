@@ -1,15 +1,15 @@
 http_interactions:
 - request:
     method: get
-    uri: http://opencitations.net/index/coci/api/v1/citation/02001010806360107050663080702026306630509-0200101080636102704000806
+    uri: http://opencitations.net/index/coci/api/v1/citation/06180334099-06101759895
     body:
       encoding: ''
       string: ''
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3 crul/0.9.0 rOpenSci(citecorp/0.2.2.94)
-      X-USER-AGENT: r-curl/4.3 crul/0.9.0 rOpenSci(citecorp/0.2.2.94)
+      User-Agent: r-curl/5.2.2 crul/1.5.0 rOpenSci(citecorp/0.3.0.94)
+      X-USER-AGENT: r-curl/5.2.2 crul/1.5.0 rOpenSci(citecorp/0.3.0.94)
   response:
     status:
       status_code: '200'
@@ -17,46 +17,44 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Wed, 08 Apr 2020 17:00:16 GMT
-      content-type: application/json
-      transfer-encoding: chunked
-      connection: keep-alive
-      set-cookie: __cfduid=db6a2aefc95ab06ea99a321c846c967d51586365216; expires=Fri,
-        08-May-20 17:00:16 GMT; path=/; domain=.opencitations.net; HttpOnly; SameSite=Lax
       access-control-allow-origin: '*'
       access-control-allow-credentials: 'true'
-      cf-cache-status: DYNAMIC
-      server: cloudflare
-      cf-ray: 580d8b28edc0fda1-PDX
-      content-encoding: gzip
+      content-type: application/json
+      access-control-allow-methods: '*'
+      access-control-allow-headers: Authorization
+      set-cookie: webpy_session_id=851759b7eb76f7e8f91f517e0f7ad3477cf85e34; Path=/;
+        httponly
+      content-length: '263'
+      date: Thu, 17 Oct 2024 16:13:35 GMT
+      server: lighttpd/1.4.53
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
       string: |-
         [
             {
-                "cited": "10.1186/ar4086",
-                "timespan": "P1Y",
-                "citing": "10.1186/1756-8722-6-59",
+                "timespan": "P1Y10M10D",
+                "citing": "10.1108/jd-12-2013-0166",
+                "creation": "2015-03-09",
+                "oci": "06180334099-06101759895",
+                "author_sc": "no",
                 "journal_sc": "no",
-                "creation": "2013",
-                "oci": "02001010806360107050663080702026306630509-0200101080636102704000806",
-                "author_sc": "no"
+                "cited": "10.5539/ass.v9n5p18"
             }
         ]
-  recorded_at: 2020-04-08 17:00:17 GMT
-  recorded_with: vcr/0.5.4, webmockr/0.6.2
+  recorded_at: 2024-10-17 16:13:35 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0
 - request:
     method: get
-    uri: http://opencitations.net/index/coci/api/v1/citation/0200101000836191363010263020001036300010606-020010003083604090301050910
+    uri: http://opencitations.net/index/coci/api/v1/citation/06180334099-0610269965
     body:
       encoding: ''
       string: ''
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3 crul/0.9.0 rOpenSci(citecorp/0.2.2.94)
-      X-USER-AGENT: r-curl/4.3 crul/0.9.0 rOpenSci(citecorp/0.2.2.94)
+      User-Agent: r-curl/5.2.2 crul/1.5.0 rOpenSci(citecorp/0.3.0.94)
+      X-USER-AGENT: r-curl/5.2.2 crul/1.5.0 rOpenSci(citecorp/0.3.0.94)
   response:
     status:
       status_code: '200'
@@ -64,32 +62,30 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Wed, 08 Apr 2020 17:00:17 GMT
-      content-type: application/json
-      transfer-encoding: chunked
-      connection: keep-alive
-      set-cookie: __cfduid=db6a2aefc95ab06ea99a321c846c967d51586365216; expires=Fri,
-        08-May-20 17:00:16 GMT; path=/; domain=.opencitations.net; HttpOnly; SameSite=Lax
       access-control-allow-origin: '*'
       access-control-allow-credentials: 'true'
-      cf-cache-status: DYNAMIC
-      server: cloudflare
-      cf-ray: 580d8b2c6d2afda1-PDX
-      content-encoding: gzip
+      content-type: application/json
+      access-control-allow-methods: '*'
+      access-control-allow-headers: Authorization
+      set-cookie: webpy_session_id=2c7429af80fab860494873b98cc9dbbbfb89b3b4; Path=/;
+        httponly
+      content-length: '262'
+      date: Thu, 17 Oct 2024 16:13:35 GMT
+      server: lighttpd/1.4.53
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
       string: |-
         [
             {
-                "cited": "10.1038/493159a",
-                "timespan": "P2Y2M",
+                "timespan": "P9Y2M5D",
                 "citing": "10.1108/jd-12-2013-0166",
-                "journal_sc": "no",
                 "creation": "2015-03-09",
-                "oci": "0200101000836191363010263020001036300010606-020010003083604090301050910",
-                "author_sc": "no"
+                "oci": "06180334099-0610269965",
+                "author_sc": "no",
+                "journal_sc": "no",
+                "cited": "10.1001/jama.295.1.90"
             }
         ]
-  recorded_at: 2020-04-08 17:00:17 GMT
-  recorded_with: vcr/0.5.4, webmockr/0.6.2
+  recorded_at: 2024-10-17 16:13:35 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0
