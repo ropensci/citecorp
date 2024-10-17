@@ -8,8 +8,9 @@
 #' @aliases citecorp
 #' @docType package
 #' @author Scott Chamberlain \email{myrmecocystus@@gmail.com}
+#' @author David Selby \email{david_antony.selby@dfki.de}
 #' @keywords package
-NULL
+"_PACKAGE"
 
 #' Vector of 25 DOIs (Digital Object Identifiers)
 #'
