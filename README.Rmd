@@ -21,7 +21,7 @@ Client for the Open Citations Corpus http://opencitations.net/ (OCC)
 OCC created their own identifiers called Open Citation Identifiers (oci), e.g., 
 
 ```
-020010009033611182421271436182433010601-02001030701361924302723102137251614233701000005090307
+06180334099-06101759895
 ```
 
 You are probably not going to be using oci identifiers, but rather DOIs and/or PMIDs

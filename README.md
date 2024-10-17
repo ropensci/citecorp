@@ -1,8 +1,6 @@
 citecorp
 =========
 
-
-
 [![cran checks](https://cranchecks.info/badges/worst/citecorp)](https://cranchecks.info/pkgs/citecorp)
 [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![R-check](https://github.com/ropensci/citecorp/workflows/R-check/badge.svg)](https://github.com/ropensci/citecorp/actions?query=workflow%3AR-check)
@@ -14,7 +12,7 @@ Client for the Open Citations Corpus http://opencitations.net/ (OCC)
 OCC created their own identifiers called Open Citation Identifiers (oci), e.g., 
 
 ```
-020010009033611182421271436182433010601-02001030701361924302723102137251614233701000005090307
+06180334099-06101759895
 ```
 
 You are probably not going to be using oci identifiers, but rather DOIs and/or PMIDs
@@ -29,62 +27,49 @@ at http://opencitations.net/sparql
 CRAN version
 
 
-```r
+``` r
 install.packages("citecorp")
 ```
 
 Development version
 
 
-```r
+``` r
 remotes::install_github("ropensci/citecorp")
 ```
 
 
-```r
+``` r
 library("citecorp")
 ```
 
 ## Methods for converting IDs
 
 
-```r
+``` r
 oc_doi2ids("10.1097/igc.0000000000000609")
-#>                            doi                           paper      pmcid
-#> 1 10.1097/igc.0000000000000609 https://w3id.org/oc/corpus/br/1 PMC4679344
-#>       pmid
-#> 1 26645990
+#>                                        doi     pmid
+#> 1 https://w3id.org/oc/meta/br/061102460616 26645990
 oc_pmid2ids("26645990")
-#>                            doi                           paper      pmcid
-#> 1 10.1097/igc.0000000000000609 https://w3id.org/oc/corpus/br/1 PMC4679344
-#>       pmid
-#> 1 26645990
+#>                            doi                                     pmid
+#> 1 10.1097/igc.0000000000000609 https://w3id.org/oc/meta/br/061102460616
 oc_pmcid2ids("PMC4679344")
-#>                            doi                           paper      pmcid
-#> 1 10.1097/igc.0000000000000609 https://w3id.org/oc/corpus/br/1 PMC4679344
-#>       pmid
-#> 1 26645990
+#> data frame with 0 columns and 0 rows
 ```
 
 You can pass in more than one identifer to each of the above functions:
 
 
-```r
+``` r
 oc_doi2ids(oc_dois[1:6])
-#>                                  doi                                 paper
-#> 1               10.1128/jvi.00758-10 https://w3id.org/oc/corpus/br/5357460
-#> 2 10.1111/j.2042-3306.1989.tb02167.x  https://w3id.org/oc/corpus/br/589891
-#> 3       10.1097/rli.0b013e31821eea45 https://w3id.org/oc/corpus/br/3931705
-#> 4           10.1177/0148607114529597 https://w3id.org/oc/corpus/br/5016780
-#> 5            10.1111/1567-1364.12217 https://w3id.org/oc/corpus/br/3819297
-#> 6      10.1016/s0168-9525(99)01798-9 https://w3id.org/oc/corpus/br/4606537
-#>        pmcid     pmid
-#> 1 PMC2953162 20702630
-#> 2       <NA>  2670542
-#> 3       <NA> 21577119
-#> 4       <NA> 24711119
-#> 5       <NA> 25263709
-#> 6       <NA> 10461200
+#>                                        doi     pmid
+#> 1   https://w3id.org/oc/meta/br/0630171503 21577119
+#> 2 https://w3id.org/oc/meta/br/062601718144  2670542
+#> 3 https://w3id.org/oc/meta/br/061401102284 20702630
+#> 4 https://w3id.org/oc/meta/br/062603752185 10461200
+#> 5 https://w3id.org/oc/meta/br/061102146039 24711119
+#> 6  https://w3id.org/oc/meta/br/06603713132 25263709
+#> 7  https://w3id.org/oc/meta/br/06170394225     <NA>
 ```
 
 ## COCI methods
@@ -94,49 +79,47 @@ OpenCitations Index of Crossref open DOI-to-DOI references
 If you don't load `tibble` you get normal data.frame's
 
 
-```r
+``` r
 library(tibble)
 doi1 <- "10.1108/jd-12-2013-0166"
 # references
 oc_coci_refs(doi1)
-#> # A tibble: 37 x 7
-#>    journal_sc author_sc timespan citing    oci             cited        creation
-#>  * <chr>      <chr>     <chr>    <chr>     <chr>           <chr>        <chr>   
-#>  1 no         no        P9Y2M5D  10.1108/… 02001010008361… 10.1001/jam… 2015-03…
-#>  2 no         no        P41Y8M   10.1108/… 02001010008361… 10.1002/asi… 2015-03…
-#>  3 no         no        P25Y6M   10.1108/… 02001010008361… 10.1002/(si… 2015-03…
-#>  4 no         no        P17Y2M   10.1108/… 02001010008361… 10.1007/bf0… 2015-03…
-#>  5 no         no        P2Y2M3D  10.1108/… 02001010008361… 10.1007/s10… 2015-03…
-#>  6 no         no        P5Y8M27D 10.1108/… 02001010008361… 10.1007/s11… 2015-03…
-#>  7 no         no        P2Y3M    10.1108/… 02001010008361… 10.1016/j.w… 2015-03…
-#>  8 no         no        P1Y10M   10.1108/… 02001010008361… 10.1016/j.w… 2015-03…
-#>  9 no         no        P12Y     10.1108/… 02001010008361… 10.1023/a:1… 2015-03…
-#> 10 no         no        P13Y10M  10.1108/… 02001010008361… 10.1038/350… 2015-03…
-#> # … with 27 more rows
+#> # A tibble: 44 × 7
+#>    timespan  citing                  creation   oci                      author_sc journal_sc cited                       
+#>  * <chr>     <chr>                   <chr>      <chr>                    <chr>     <chr>      <chr>                       
+#>  1 P1Y10M10D 10.1108/jd-12-2013-0166 2015-03-09 06180334099-06101759895  no        no         10.5539/ass.v9n5p18         
+#>  2 P9Y2M5D   10.1108/jd-12-2013-0166 2015-03-09 06180334099-0610269965   no        no         10.1001/jama.295.1.90       
+#>  3 P1Y5M     10.1108/jd-12-2013-0166 2015-03-09 06180334099-06110356152  no        no         10.1038/502298a             
+#>  4 P1Y5M     10.1108/jd-12-2013-0166 2015-03-09 06180334099-06110356153  no        no         10.1038/502295a             
+#>  5 P43Y      10.1108/jd-12-2013-0166 2015-03-09 06180334099-061301147654 no        no         10.1101/sqb.1972.036.01.015 
+#>  6 P5Y10M20D 10.1108/jd-12-2013-0166 2015-03-09 06180334099-061301788813 no        no         10.1371/journal.pcbi.1000361
+#>  7 P5Y2M27D  10.1108/jd-12-2013-0166 2015-03-09 06180334099-061303036324 no        no         10.1042/bio03106023         
+#>  8 P2Y0M     10.1108/jd-12-2013-0166 2015-03-09 06180334099-06130345519  no        no         10.1038/495437a             
+#>  9 P49Y7M9D  10.1108/jd-12-2013-0166 2015-03-09 06180334099-06130479737  no        no         10.1126/science.149.3683.510
+#> 10 P2Y2M     10.1108/jd-12-2013-0166 2015-03-09 06180334099-06140344762  no        no         10.1038/493159a             
+#> # ℹ 34 more rows
 # citations
 oc_coci_cites(doi1)
-#> # A tibble: 23 x 7
-#>    journal_sc author_sc timespan  citing     oci               cited    creation
-#>  * <chr>      <chr>     <chr>     <chr>      <chr>             <chr>    <chr>   
-#>  1 no         no        P3Y       10.1145/3… 0200101040536030… 10.1108… 2018    
-#>  2 no         no        P2Y5M     10.1057/s… 0200100050736280… 10.1108… 2017-08 
-#>  3 no         no        P4Y1M1D   10.3233/d… 0200302030336132… 10.1108… 2019-04…
-#>  4 no         no        P4Y5M10D  10.3233/d… 0200302030336132… 10.1108… 2019-08…
-#>  5 no         no        P1Y0M14D  10.3233/s… 0200302030336283… 10.1108… 2016-03…
-#>  6 no         no        P3Y10M12D 10.3233/s… 0200302030336283… 10.1108… 2019-01…
-#>  7 no         no        P3Y6M     10.1142/s… 0200101040236280… 10.1108… 2018-09 
-#>  8 no         no        P2Y11M20D 10.7554/e… 0200705050436142… 10.1108… 2018-03…
-#>  9 no         no        P0Y       10.3346/j… 0200303040636192… 10.1108… 2015    
-#> 10 no         no        P3Y       10.1007/9… 0200100000736090… 10.1108… 2018    
-#> # … with 13 more rows
+#> # A tibble: 34 × 7
+#>    timespan  citing                         creation   oci                      author_sc journal_sc cited                  
+#>  * <chr>     <chr>                          <chr>      <chr>                    <chr>     <chr>      <chr>                  
+#>  1 P6Y0M1D   10.7717/peerj-cs.421           2021-03-10 06101801781-06180334099  no        no         10.1108/jd-12-2013-0166
+#>  2 P4Y8M16D  10.3233/ds-190019              2019-11-25 06102227626-06180334099  no        no         10.1108/jd-12-2013-0166
+#>  3 P4Y8M16D  10.3233/ds-190016              2019-11-25 06102227629-06180334099  yes       no         10.1108/jd-12-2013-0166
+#>  4 P3Y10M12D 10.3233/sw-180307              2019-01-21 06103007421-06180334099  no        no         10.1108/jd-12-2013-0166
+#>  5 P1Y0M14D  10.3233/sw-160224              2016-03-23 06103007543-06180334099  yes       no         10.1108/jd-12-2013-0166
+#>  6 P2Y4M     10.1057/s41275-017-0070-x      2017-08    0610442128-06180334099   no        no         10.1108/jd-12-2013-0166
+#>  7 P2Y11M20D 10.7287/peerj.preprints.3100v3 2018-03-01 06110834152-06180334099  no        no         10.1108/jd-12-2013-0166
+#>  8 P1Y11M5D  10.1101/108480                 2017-02-14 061302465288-06180334099 no        no         10.1108/jd-12-2013-0166
+#>  9 P3Y10M29D 10.59350/zcrhs-r7h02           2019-02-07 061303889475-06180334099 no        no         10.1108/jd-12-2013-0166
+#> 10 P2Y       10.1007/978-3-030-01379-0_9    2018       061502183940-06180334099 yes       no         10.1108/jd-12-2013-0166
+#> # ℹ 24 more rows
 # metadata
 oc_coci_meta(doi1)
-#> # A tibble: 1 x 13
-#>   doi   reference issue source_id citation page  volume author citation_count
-#> * <chr> <chr>     <chr> <chr>     <chr>    <chr> <chr>  <chr>  <chr>         
-#> 1 10.1… 10.1001/… 2     issn:002… 10.1145… 253-… 71     Peron… 23            
-#> # … with 4 more variables: year <chr>, source_title <chr>, title <chr>,
-#> #   oa_link <chr>
+#> # A tibble: 1 × 13
+#>   oa_link issue reference                                                                                                                                                                                   source_title doi   citation year  citation_count title page  source_id volume author
+#> * <chr>   <chr> <chr>                                                                                                                                                                                       <chr>        <chr> <chr>    <chr> <chr>          <chr> <chr> <chr>     <chr>  <chr> 
+#> 1 ""      2     10.1136/bmj.b2680; 10.1145/1217821.1226695; 10.1145/2362499.2362502; 10.1136/bmj.a568; 10.1145/2494266.2494271; 10.1523/jneurosci.0003-08.2008; 10.1007/978-3-319-03524-6_29; 10.1073/pnas… Journal Of … 10.1… 10.1057… 2015… 34             Sett… 253-… issn:002… 71     Peron…
 ```
 
 
