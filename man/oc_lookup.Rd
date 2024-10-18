@@ -49,8 +49,8 @@ try(
 \dontrun{
 oc_doi2ids('10.1093/biomet/80.3.527')
 oc_doi2ids('10.1093/biomet/79.3.531')
-oc_pmid2ids("26645990")
-oc_pmcid2ids("PMC4679344")
+oc_pmid2ids("31857888")
+oc_pmcid2ids("PMC6422012")
 
 oc_doi2ids(id = oc_dois[1:3])
 oc_pmid2ids(id = oc_pmids[1:3])

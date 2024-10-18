@@ -1,15 +1,15 @@
 http_interactions:
 - request:
     method: get
-    uri: http://opencitations.net/meta/sparql?query=PREFIX%20datacite%3A%20%3Chttp%3A%2F%2Fpurl.org%2Fspar%2Fdatacite%2F%3E%0A%20%20PREFIX%20literal%3A%20%3Chttp%3A%2F%2Fwww.essepuntato.it%2F2010%2F06%2Fliteralreification%2F%3E%0A%20%20SELECT%20%3Fpaper%20%3Fdoi%20%3Fpmcid%20%3Fvalue%0A%20%20WHERE%20%7B%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%3Fpaper%20datacite%3AhasIdentifier%20%5B%0A%20%20%20%20%20%20%20%20%20%20datacite%3AusesIdentifierScheme%20datacite%3Apmid%20%3B%0A%20%20%20%20%20%20%20%20%20%20literal%3AhasLiteralValue%20%3Fvalue%0A%20%20%20%20%20%20%5D%20.%0A%0A%20%20%20%20%20%20OPTIONAL%20%7B%0A%20%20%20%20%20%20%20%20%3Fpaper%20datacite%3AhasIdentifier%20%5B%0A%20%20%20%20%20%20%20%20%20%20datacite%3AusesIdentifierScheme%20datacite%3Adoi%20%3B%0A%20%20%20%20%20%20%20%20%20%20literal%3AhasLiteralValue%20%3Fdoi%0A%20%20%20%20%20%20%20%20%5D%20.%0A%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20OPTIONAL%20%7B%0A%20%20%20%20%20%20%20%20%3Fpaper%20datacite%3AhasIdentifier%20%5B%0A%20%20%20%20%20%20%20%20%20%20datacite%3AusesIdentifierScheme%20datacite%3Apmcid%20%3B%0A%20%20%20%20%20%20%20%20%20%20literal%3AhasLiteralValue%20%3Fpmcid%0A%20%20%20%20%20%20%20%20%5D%20.%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%20.%0A%20%20%20%20VALUES%20%3Fvalue%20%7B%20%2226645990%22%20%7D%0A%20%20%7D&format=json
+    uri: http://opencitations.net/meta/sparql?query=PREFIX%20datacite%3A%20%3Chttp%3A%2F%2Fpurl.org%2Fspar%2Fdatacite%2F%3E%0A%20%20PREFIX%20literal%3A%20%3Chttp%3A%2F%2Fwww.essepuntato.it%2F2010%2F06%2Fliteralreification%2F%3E%0A%20%20SELECT%20%3Fpaper%20%3Fdoi%20%3Fpmcid%20%3Fvalue%0A%20%20WHERE%20%7B%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%3Fpaper%20datacite%3AhasIdentifier%20%5B%0A%20%20%20%20%20%20%20%20%20%20datacite%3AusesIdentifierScheme%20datacite%3Apmid%20%3B%0A%20%20%20%20%20%20%20%20%20%20literal%3AhasLiteralValue%20%3Fvalue%0A%20%20%20%20%20%20%5D%20.%0A%0A%20%20%20%20%20%20OPTIONAL%20%7B%0A%20%20%20%20%20%20%20%20%3Fpaper%20datacite%3AhasIdentifier%20%5B%0A%20%20%20%20%20%20%20%20%20%20datacite%3AusesIdentifierScheme%20datacite%3Adoi%20%3B%0A%20%20%20%20%20%20%20%20%20%20literal%3AhasLiteralValue%20%3Fdoi%0A%20%20%20%20%20%20%20%20%5D%20.%0A%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20OPTIONAL%20%7B%0A%20%20%20%20%20%20%20%20%3Fpaper%20datacite%3AhasIdentifier%20%5B%0A%20%20%20%20%20%20%20%20%20%20datacite%3AusesIdentifierScheme%20datacite%3Apmcid%20%3B%0A%20%20%20%20%20%20%20%20%20%20literal%3AhasLiteralValue%20%3Fpmcid%0A%20%20%20%20%20%20%20%20%5D%20.%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%20.%0A%20%20%20%20VALUES%20%3Fvalue%20%7B%20%2231857888%22%20%7D%0A%20%20%7D&format=json
     body:
       encoding: ''
       string: ''
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/sparql-results+json
-      User-Agent: r-curl/4.3 crul/0.9.0 rOpenSci(citecorp/0.2.2.91)
-      X-USER-AGENT: r-curl/4.3 crul/0.9.0 rOpenSci(citecorp/0.2.2.91)
+      User-Agent: r-curl/5.2.2 crul/1.5.0 rOpenSci(citecorp/0.3.0.94)
+      X-USER-AGENT: r-curl/5.2.2 crul/1.5.0 rOpenSci(citecorp/0.3.0.94)
   response:
     status:
       status_code: '200'
@@ -17,45 +17,26 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Wed, 08 Apr 2020 16:28:40 GMT
-      content-type: application/sparql-results+json
-      content-length: '494'
-      connection: keep-alive
-      set-cookie: __cfduid=d899be90653fa06f7d9bcd7391cd8c4f11586363320; expires=Fri,
-        08-May-20 16:28:40 GMT; path=/; domain=.opencitations.net; HttpOnly; SameSite=Lax
       access-control-allow-origin: '*'
       access-control-allow-credentials: 'true'
-      cf-cache-status: DYNAMIC
-      server: cloudflare
-      cf-ray: 580d5ce149ad8ce5-PDX
+      content-type: application/sparql-results+json
+      set-cookie: webpy_session_id=ad51de3fe0a8f24127e7f6bb77e651ee6d17fb8a; Path=/;
+        httponly
+      content-length: '660'
+      date: Fri, 18 Oct 2024 09:39:40 GMT
+      server: lighttpd/1.4.53
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
-      string: |-
-        {
-          "head" : {
-            "vars" : [ "paper", "doi", "pmcid", "value" ]
-          },
-          "results" : {
-            "bindings" : [ {
-              "value" : {
-                "type" : "literal",
-                "value" : "26645990"
-              },
-              "paper" : {
-                "type" : "uri",
-                "value" : "https://w3id.org/oc/corpus/br/1"
-              },
-              "doi" : {
-                "type" : "literal",
-                "value" : "10.1097/igc.0000000000000609"
-              },
-              "pmcid" : {
-                "type" : "literal",
-                "value" : "PMC4679344"
-              }
-            } ]
-          }
-        }
-  recorded_at: 2020-04-08 16:28:41 GMT
-  recorded_with: vcr/0.5.4, webmockr/0.6.2
+      string: "\n{ \"head\": { \"link\": [], \"vars\": [\"paper\", \"doi\", \"pmcid\",
+        \"value\"] },\n  \"results\": { \"distinct\": false, \"ordered\": true, \"bindings\":
+        [\n    { \"paper\": { \"type\": \"uri\", \"value\": \"https://w3id.org/oc/meta/br/061103888040\"
+        }\t, \"doi\": { \"type\": \"literal\", \"value\": \"10.1039/c9sc00991d\" }\t,
+        \"pmcid\": { \"type\": \"literal\", \"value\": \"PMC6422012\" }\t, \"value\":
+        { \"type\": \"literal\", \"value\": \"31857888\" }},\n    { \"paper\": { \"type\":
+        \"uri\", \"value\": \"https://w3id.org/oc/meta/br/061103888040\" }\t, \"doi\":
+        { \"type\": \"literal\", \"value\": \"10.1039/c9sc02702e\" }\t, \"pmcid\":
+        { \"type\": \"literal\", \"value\": \"PMC6422012\" }\t, \"value\": { \"type\":
+        \"literal\", \"value\": \"31857888\" }} ] } }"
+  recorded_at: 2024-10-18 09:39:40 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0

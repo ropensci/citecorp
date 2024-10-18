@@ -4,7 +4,7 @@ Title: Client for the Open Citations Corpus
 Description: Client for the Open Citations Corpus (<http://opencitations.net/>).
     Includes a set of functions for getting one identifier type from another,
     as well as getting references and citations for a given identifier.
-Version: 0.3.0.94
+Version: 0.3.1.9000
 Authors@R: c(
     person("Scott", "Chamberlain", role = "aut",
         email = "myrmecocystus@gmail.com", 

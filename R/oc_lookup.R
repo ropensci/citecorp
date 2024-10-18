@@ -1,14 +1,24 @@
 oc_2ids_template <- function(template_string, id_name) {
   function(id, ...) {
+    # Ensure id is of correct type
     assert(id, c("character", "integer", "numeric"))
+
+    # Construct the query string
     qry <- sprintf(template_string, paste0(sprintf("\"%s\"", id), collapse = " "))
+
+    # Execute the query and get results
     tmp <- cp_query(qry, ...)$results$bindings
+
+    # If no results, return an empty data.frame
     if (length(tmp) == 0) return(data.frame(NULL))
+
+    # Process the results
     df <- tmp[-grep('\\.type', names(tmp))]
     names(df) <- gsub("\\.value", "", names(df))
-    names(df)[1] <- id_name
-    df <- df[, names(df) %in% c("doi", "pmid", "pmcid", "paper")]
-    df <- df[, sort(names(df))]
+    names(df)[names(df) == "value"] <- id_name
+    df <- df[, names(df) %in% c("doi", "pmid", "pmcid", "paper"), drop = FALSE]
+    df <- df[, sort(names(df)), drop = FALSE]
+
     return(df)
   }
 }
@@ -44,8 +54,8 @@ oc_2ids_template <- function(template_string, id_name) {
 #' \dontrun{
 #' oc_doi2ids('10.1093/biomet/80.3.527')
 #' oc_doi2ids('10.1093/biomet/79.3.531')
-#' oc_pmid2ids("26645990")
-#' oc_pmcid2ids("PMC4679344")
+#' oc_pmid2ids("31857888")
+#' oc_pmcid2ids("PMC6422012")
 #' 
 #' oc_doi2ids(id = oc_dois[1:3])
 #' oc_pmid2ids(id = oc_pmids[1:3])

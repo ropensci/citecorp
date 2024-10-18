@@ -1,15 +1,15 @@
 http_interactions:
 - request:
     method: get
-    uri: http://opencitations.net/meta/sparql?query=PREFIX%20datacite%3A%20%3Chttp%3A%2F%2Fpurl.org%2Fspar%2Fdatacite%2F%3E%0A%20%20PREFIX%20literal%3A%20%3Chttp%3A%2F%2Fwww.essepuntato.it%2F2010%2F06%2Fliteralreification%2F%3E%0A%20%20SELECT%20%3Fpaper%20%3Fdoi%20%3Fpmid%20%3Fvalue%0A%20%20WHERE%20%7B%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%3Fpaper%20datacite%3AhasIdentifier%20%5B%0A%20%20%20%20%20%20%20%20%20%20datacite%3AusesIdentifierScheme%20datacite%3Apmcid%20%3B%0A%20%20%20%20%20%20%20%20%20%20literal%3AhasLiteralValue%20%3Fvalue%0A%20%20%20%20%20%20%5D%20.%0A%0A%20%20%20%20%20%20OPTIONAL%20%7B%0A%20%20%20%20%20%20%20%20%3Fpaper%20datacite%3AhasIdentifier%20%5B%0A%20%20%20%20%20%20%20%20%20%20datacite%3AusesIdentifierScheme%20datacite%3Adoi%20%3B%0A%20%20%20%20%20%20%20%20%20%20literal%3AhasLiteralValue%20%3Fdoi%0A%20%20%20%20%20%20%20%20%5D%20.%0A%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20OPTIONAL%20%7B%0A%20%20%20%20%20%20%20%20%3Fpaper%20datacite%3AhasIdentifier%20%5B%0A%20%20%20%20%20%20%20%20%20%20datacite%3AusesIdentifierScheme%20datacite%3Apmid%20%3B%0A%20%20%20%20%20%20%20%20%20%20literal%3AhasLiteralValue%20%3Fpmid%0A%20%20%20%20%20%20%20%20%5D%20.%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%20.%0A%20%20%20%20VALUES%20%3Fvalue%20%7B%20%22PMC4679344%22%20%7D%0A%20%20%7D&format=json
+    uri: http://opencitations.net/meta/sparql?query=PREFIX%20datacite%3A%20%3Chttp%3A%2F%2Fpurl.org%2Fspar%2Fdatacite%2F%3E%0A%20%20PREFIX%20literal%3A%20%3Chttp%3A%2F%2Fwww.essepuntato.it%2F2010%2F06%2Fliteralreification%2F%3E%0A%20%20SELECT%20%3Fpaper%20%3Fdoi%20%3Fpmid%20%3Fvalue%0A%20%20WHERE%20%7B%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%3Fpaper%20datacite%3AhasIdentifier%20%5B%0A%20%20%20%20%20%20%20%20%20%20datacite%3AusesIdentifierScheme%20datacite%3Apmcid%20%3B%0A%20%20%20%20%20%20%20%20%20%20literal%3AhasLiteralValue%20%3Fvalue%0A%20%20%20%20%20%20%5D%20.%0A%0A%20%20%20%20%20%20OPTIONAL%20%7B%0A%20%20%20%20%20%20%20%20%3Fpaper%20datacite%3AhasIdentifier%20%5B%0A%20%20%20%20%20%20%20%20%20%20datacite%3AusesIdentifierScheme%20datacite%3Adoi%20%3B%0A%20%20%20%20%20%20%20%20%20%20literal%3AhasLiteralValue%20%3Fdoi%0A%20%20%20%20%20%20%20%20%5D%20.%0A%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20OPTIONAL%20%7B%0A%20%20%20%20%20%20%20%20%3Fpaper%20datacite%3AhasIdentifier%20%5B%0A%20%20%20%20%20%20%20%20%20%20datacite%3AusesIdentifierScheme%20datacite%3Apmid%20%3B%0A%20%20%20%20%20%20%20%20%20%20literal%3AhasLiteralValue%20%3Fpmid%0A%20%20%20%20%20%20%20%20%5D%20.%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%20.%0A%20%20%20%20VALUES%20%3Fvalue%20%7B%20%22PMC6422012%22%20%7D%0A%20%20%7D&format=json
     body:
       encoding: ''
       string: ''
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/sparql-results+json
-      User-Agent: r-curl/4.3 crul/0.9.0 rOpenSci(citecorp/0.2.2.91)
-      X-USER-AGENT: r-curl/4.3 crul/0.9.0 rOpenSci(citecorp/0.2.2.91)
+      User-Agent: r-curl/5.2.2 crul/1.5.0 rOpenSci(citecorp/0.3.0.94)
+      X-USER-AGENT: r-curl/5.2.2 crul/1.5.0 rOpenSci(citecorp/0.3.0.94)
   response:
     status:
       status_code: '200'
@@ -17,45 +17,34 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Wed, 08 Apr 2020 16:28:41 GMT
-      content-type: application/sparql-results+json
-      content-length: '492'
-      connection: keep-alive
-      set-cookie: __cfduid=d44301f22f356f9b6765e1e51055f26e01586363321; expires=Fri,
-        08-May-20 16:28:41 GMT; path=/; domain=.opencitations.net; HttpOnly; SameSite=Lax
       access-control-allow-origin: '*'
       access-control-allow-credentials: 'true'
-      cf-cache-status: DYNAMIC
-      server: cloudflare
-      cf-ray: 580d5ce51b738ce5-PDX
+      content-type: application/sparql-results+json
+      set-cookie: webpy_session_id=f95f09028e8f21903970cca22a04b5f7cceb14d4; Path=/;
+        httponly
+      content-length: '1175'
+      date: Fri, 18 Oct 2024 09:41:25 GMT
+      server: lighttpd/1.4.53
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
-      string: |-
-        {
-          "head" : {
-            "vars" : [ "paper", "doi", "pmid", "value" ]
-          },
-          "results" : {
-            "bindings" : [ {
-              "value" : {
-                "type" : "literal",
-                "value" : "PMC4679344"
-              },
-              "paper" : {
-                "type" : "uri",
-                "value" : "https://w3id.org/oc/corpus/br/1"
-              },
-              "doi" : {
-                "type" : "literal",
-                "value" : "10.1097/igc.0000000000000609"
-              },
-              "pmid" : {
-                "type" : "literal",
-                "value" : "26645990"
-              }
-            } ]
-          }
-        }
-  recorded_at: 2020-04-08 16:28:41 GMT
-  recorded_with: vcr/0.5.4, webmockr/0.6.2
+      string: "\n{ \"head\": { \"link\": [], \"vars\": [\"paper\", \"doi\", \"pmid\",
+        \"value\"] },\n  \"results\": { \"distinct\": false, \"ordered\": true, \"bindings\":
+        [\n    { \"paper\": { \"type\": \"uri\", \"value\": \"https://w3id.org/oc/meta/br/061103888040\"
+        }\t, \"doi\": { \"type\": \"literal\", \"value\": \"10.1039/c9sc00991d\" }\t,
+        \"pmid\": { \"type\": \"literal\", \"value\": \"31859689\" }\t, \"value\":
+        { \"type\": \"literal\", \"value\": \"PMC6422012\" }},\n    { \"paper\": {
+        \"type\": \"uri\", \"value\": \"https://w3id.org/oc/meta/br/061103888040\"
+        }\t, \"doi\": { \"type\": \"literal\", \"value\": \"10.1039/c9sc00991d\" }\t,
+        \"pmid\": { \"type\": \"literal\", \"value\": \"31857888\" }\t, \"value\":
+        { \"type\": \"literal\", \"value\": \"PMC6422012\" }},\n    { \"paper\": {
+        \"type\": \"uri\", \"value\": \"https://w3id.org/oc/meta/br/061103888040\"
+        }\t, \"doi\": { \"type\": \"literal\", \"value\": \"10.1039/c9sc02702e\" }\t,
+        \"pmid\": { \"type\": \"literal\", \"value\": \"31857888\" }\t, \"value\":
+        { \"type\": \"literal\", \"value\": \"PMC6422012\" }},\n    { \"paper\": {
+        \"type\": \"uri\", \"value\": \"https://w3id.org/oc/meta/br/061103888040\"
+        }\t, \"doi\": { \"type\": \"literal\", \"value\": \"10.1039/c9sc02702e\" }\t,
+        \"pmid\": { \"type\": \"literal\", \"value\": \"31859689\" }\t, \"value\":
+        { \"type\": \"literal\", \"value\": \"PMC6422012\" }} ] } }"
+  recorded_at: 2024-10-18 09:41:25 GMT
+  recorded_with: vcr/1.6.0, webmockr/1.0.0
