@@ -106,6 +106,8 @@ oc_coci_stub <- function(path, doi, exclude, filter, sort, ...) {
   assert(exclude, "character")
   assert(filter, "character")
   assert(sort, "character")
+  if (length(doi) > 100)
+    stop(sprintf("You are requesting too many DOIs (%d); please limit to <= 100 per query", length(doi)))
   args <- cp(list(exclude = exclude, filter = filter, sort = sort))
   doi <- paste0(doi, collapse = "__")
   x <- oc_GET(coci_base, file.path(coci_meta, path, doi),
