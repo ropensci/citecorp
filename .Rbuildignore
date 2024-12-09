@@ -14,3 +14,4 @@ prefix_notes.R
 .github
 ^codemeta\.json$
 inst/scripts/*
+^\.github$
